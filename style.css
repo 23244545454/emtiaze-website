@@ -84,6 +84,22 @@ body {
     transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
+/* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+[data-theme="dark"] header {
+    background: rgba(31, 41, 55, 0.95);
+    border-bottom-color: var(--border-color);
+}
+
 /* Preloader */
 #preloader {
     position: fixed;
@@ -870,6 +886,16 @@ section {
 section.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Page content spacing for sticky header */
+.partners-full,
+.about-full,
+.services-detailed,
+.projects-detailed,
+.contact-content,
+.quote-form {
+    padding-top: calc(var(--spacing-2xl) + 120px);
 }
 
 #home {
