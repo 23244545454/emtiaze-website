@@ -45,7 +45,7 @@ function generateSharedHTML() {
     const headerHTML = `
         <div class="top-bar">
             <div class="contact-info">
-                <span data-i18n="email">info@emtiaze.com</span>
+                <span data-i18n="email">info@allianceofemtiaz.com</span>
                 <span data-i18n="phone">+966 55 839 1838</span>
             </div>
             <div class="top-bar-right">
@@ -91,7 +91,7 @@ function generateSharedHTML() {
                     <h3 data-i18n="contact_information">Contact Information</h3>
                     <p data-i18n="address">Address: Riyadh, Saudi Arabia</p>
                     <p data-i18n="phone">Phone: +966 55 839 1838</p>
-                    <p data-i18n="email">Email: info@emtiaze.com</p>
+                    <p data-i18n="email">Email: info@allianceofemtiaz.com</p>
                     </div>
                     <div class="footer-section">
                     <h3 data-i18n="important_links">Important Links</h3>
