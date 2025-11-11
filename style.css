@@ -1197,6 +1197,53 @@ h2::after {
     .newsletter-form input {
         margin-bottom: var(--spacing-md);
     }
+
+    /* Contact Page */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .contact-form-section {
+        order: 2;
+    }
+
+    .contact-info-section {
+        order: 1;
+    }
+
+    /* Quote Page */
+    .quote-form {
+        padding: 0 var(--spacing-md);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-section .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    /* Services Page */
+    .services-detailed {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Projects Page */
+    .projects-detailed {
+        grid-template-columns: 1fr;
+    }
+
+    .project-detail {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
