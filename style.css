@@ -903,7 +903,7 @@ section.visible {
 .projects-detailed,
 .contact-content,
 .quote-form {
-    padding-top: calc(var(--spacing-2xl) + 120px);
+    padding-top: calc(var(--spacing-2xl) + 80px);
 }
 
 #home {
