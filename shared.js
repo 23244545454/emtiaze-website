@@ -29,6 +29,7 @@ function generateSharedHTML() {
     let aboutHref = isInPages ? 'about.html' : 'pages/about.html';
     let servicesHref = isInPages ? 'services.html' : 'pages/services.html';
     let projectsHref = isInPages ? 'projects.html' : 'pages/projects.html';
+    let partnersHref = isInPages ? 'partners.html' : 'pages/partners.html';
     let quoteHref = isInPages ? 'quote.html' : 'pages/quote.html';
     let contactHref = isInPages ? 'contact.html' : 'pages/contact.html';
     const logoSrc = isInPages ? '../images/logo.png' : 'images/logo.png';
@@ -39,6 +40,7 @@ function generateSharedHTML() {
     if (currentPath === '/pages/about.html') aboutHref = '#';
     if (currentPath === '/pages/services.html') servicesHref = '#';
     if (currentPath === '/pages/projects.html') projectsHref = '#';
+    if (currentPath === '/pages/partners.html') partnersHref = '#';
     if (currentPath === '/pages/quote.html') quoteHref = '#';
     if (currentPath === '/pages/contact.html') contactHref = '#';
 
@@ -100,6 +102,7 @@ function generateSharedHTML() {
                         <li><a href="${aboutHref}" data-i18n="about">About Us</a></li>
                         <li><a href="${servicesHref}" data-i18n="services">Our Services</a></li>
                         <li><a href="${projectsHref}" data-i18n="projects">Our Projects</a></li>
+                        <li><a href="${partnersHref}" data-i18n="partners">Partners</a></li>
                         <li><a href="${quoteHref}" data-i18n="quote">Request a Quote</a></li>
                         <li><a href="${contactHref}" data-i18n="contact">Contact Us</a></li>
                     </ul>
@@ -128,6 +131,7 @@ function generateSharedHTML() {
             <li><a href="${aboutHref}" onclick="closeMenu()"><i class="fas fa-info-circle"></i><span data-i18n="about">About Us</span></a></li>
             <li><a href="${servicesHref}" onclick="closeMenu()"><i class="fas fa-cogs"></i><span data-i18n="services">Our Services</span></a></li>
             <li><a href="${projectsHref}" onclick="closeMenu()"><i class="fas fa-project-diagram"></i><span data-i18n="projects">Our Projects</span></a></li>
+            <li><a href="${partnersHref}" onclick="closeMenu()"><i class="fas fa-handshake"></i><span data-i18n="partners">Partners</span></a></li>
             <li><a href="${quoteHref}" onclick="closeMenu()"><i class="fas fa-quote-right"></i><span data-i18n="quote">Request Quote</span></a></li>
             <li><a href="${contactHref}" onclick="closeMenu()"><i class="fas fa-envelope"></i><span data-i18n="contact">Contact Us</span></a></li>
             </ul>
