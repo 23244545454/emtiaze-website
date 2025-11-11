@@ -412,14 +412,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Simple form handling for contact and quote forms
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message. We will get back to you soon!');
-            contactForm.reset();
-        });
-    }
+
 
 
 
