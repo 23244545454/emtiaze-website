@@ -48,7 +48,7 @@ function generateSharedHTML() {
     <div class="top-bar">
     <div class="contact-info">
     <span class="email" data-i18n="email">info@allianceofemtiaz.com</span>
-    <span class="phone" data-i18n="phone">+966 55 839 1838</span>
+    <span class="phone"><span dir="ltr" data-i18n="phone">+966 55 839 1838</span></span>
     </div>
             <div class="top-bar-right">
                 <select id="language-selector">
@@ -92,8 +92,8 @@ function generateSharedHTML() {
                 <div class="footer-section">
                 <h3 data-i18n="contact_information">Contact Information</h3>
                 <p data-i18n="address">Address: Riyadh, Saudi Arabia</p>
-                <p class="phone" data-i18n="phone">Phone: +966 55 839 1838</p>
-                <p class="email" data-i18n="email">Email: info@allianceofemtiaz.com</p>
+                <p class="phone"><span dir="ltr" data-i18n="phone">Phone: +966 55 839 1838</span></p>
+                <p class="email"><span dir="ltr" data-i18n="email">Email: info@allianceofemtiaz.com</span></p>
                 </div>
                     <div class="footer-section">
                     <h3 data-i18n="important_links">Important Links</h3>

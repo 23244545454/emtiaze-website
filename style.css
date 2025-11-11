@@ -240,13 +240,7 @@ direction: rtl;
 margin-left: var(--spacing-md);
 }
 
-/* Force LTR for numbers in Arabic mode */
-[dir="ar"] .counter,
-[dir="ar"] .phone,
-[dir="ar"] .email {
-direction: ltr;
-unicode-bidi: embed;
-}
+
 
 [dir="ar"] .footer-content {
     direction: rtl;
