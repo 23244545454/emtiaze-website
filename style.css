@@ -67,6 +67,26 @@
     --border-color: #374151;
 }
 
+/* Dark mode specific overrides for cards */
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .partner-item {
+    background: var(--surface-primary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .service-card h3,
+[data-theme="dark"] .project-card h3,
+[data-theme="dark"] .partner-item div {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .service-card p,
+[data-theme="dark"] .project-card p {
+    color: var(--text-secondary);
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
