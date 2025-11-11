@@ -119,7 +119,11 @@ const translations = {
         contact_information: "Contact Information",
         address: "Address: Riyadh, Saudi Arabia",
         important_links: "Important Links",
-        follow_us: "Follow Us"
+        follow_us: "Follow Us",
+            years_experience: "Years of Experience",
+        projects_completed: "Projects Completed",
+        client_satisfaction: "Client Satisfaction (%)",
+        support_hours: "/7 Support"
     },
     ar: {
         company_name: "شركة تحالف الامتياز المحدودة",
@@ -237,6 +241,10 @@ const translations = {
         address: "العنوان: الرياض، المملكة العربية السعودية",
         important_links: "روابط مهمة",
         follow_us: "تابعنا",
+        years_experience: "سنوات الخبرة",
+        projects_completed: "المشاريع المكتملة",
+        client_satisfaction: "رضا العملاء (%)",
+        support_hours: "دعم /7",
         language_english: "English",
         language_arabic: "العربية",
         alt_company_logo: "شعار شركة الامتياز",
@@ -373,6 +381,50 @@ document.addEventListener('DOMContentLoaded', function() {
             quoteForm.reset();
         });
     }
+
+    // Typing effect for hero title
+    const typingElement = document.querySelector('.typing-effect');
+    if (typingElement) {
+        const text = typingElement.textContent;
+        typingElement.textContent = '';
+        let i = 0;
+        const typeWriter = () => {
+            if (i < text.length) {
+                typingElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        };
+        setTimeout(typeWriter, 1000);
+    }
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                const increment = target / 200;
+                let count = 0;
+                const updateCounter = () => {
+                    count += increment;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCounter, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCounter();
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
 
     console.log('Website loaded');
 });
