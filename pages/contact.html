@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tahaluf Alemtiaz Company Limited</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../shared.js"></script>
+</head>
+<body>
+    <div id="preloader">
+    <div class="spinner"></div>
+    </div>
+    <header id="shared-header"></header>
+
+    <section class="contact-full">
+        <div class="container">
+            <h1 data-i18n="contact">Contact Us</h1>
+            <p data-i18n="contact_intro">Get in touch with us for all your petroleum derivatives transportation needs. We're here to help!</p>
+            <div class="contact-content">
+            <div class="contact-form-section">
+            <h2 data-i18n="send_message">Send us a Message</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="email_label">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="phone" data-i18n="phone_label">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" data-i18n="send_message_btn">Send Message</button>
+                        </form>
+                        </div>
+                        <div class="contact-info-section">
+                        <h2 data-i18n="get_in_touch">Get in Touch</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3 data-i18n="address">Address</h3>
+                            <p>Riyadh, Saudi Arabia</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3 data-i18n="phone">Phone</h3>
+                            <p>+966 55 839 1838</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3 data-i18n="email">Email</h3>
+                            <p>info@emtiaze.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3 data-i18n="business_hours">Business Hours</h3>
+                            <p data-i18n="hours">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <div class="map-placeholder">
+                        <img src="../images/map.jpg" alt="Location Map" data-i18n-alt="alt_location_map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="shared-footer"></footer>
+
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Quote - Tahaluf Alemtiaz Company Limited</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../shared.js"></script>
+</head>
+<body>
+    <div id="preloader">
+    <div class="spinner"></div>
+    </div>
+    <header id="shared-header"></header>
+
+    <section class="quote-section">
+        <div class="container">
+            <h1 data-i18n="quote">Request a Quote</h1>
+            <p data-i18n="quote_intro">Get a personalized quote for your petroleum derivatives transportation needs. Fill out the form below and we'll get back to you promptly.</p>
+            <form class="quote-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company-name" data-i18n="company_name_label">Company Name</label>
+                        <input type="text" id="company-name" name="company-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-person" data-i18n="contact_person">Contact Person</label>
+                        <input type="text" id="contact-person" name="contact-person" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                    <label for="email" data-i18n="email_label">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="phone" data-i18n="phone_label">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service-type" data-i18n="service_type">Service Type</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="" data-i18n="select_service">Select Service</option>
+                        <option value="petroleum-transport" data-i18n="service1_title">Petroleum Derivatives Transportation</option>
+                        <option value="logistics" data-i18n="service2_title">Logistical Solutions</option>
+                        <option value="operations" data-i18n="service3_title">Transport Operations Management</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product-type" data-i18n="product_type">Product Type</label>
+                    <input type="text" id="product-type" name="product-type" placeholder="e.g., Diesel, Gasoline" data-i18n-placeholder="product_type_placeholder">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quantity" data-i18n="quantity">Quantity (Liters)</label>
+                        <input type="number" id="quantity" name="quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency" data-i18n="frequency">Frequency</label>
+                        <select id="frequency" name="frequency">
+                        <option value="one-time" data-i18n="one_time">One-time</option>
+                        <option value="weekly" data-i18n="weekly">Weekly</option>
+                        <option value="monthly" data-i18n="monthly">Monthly</option>
+                        <option value="ongoing" data-i18n="ongoing">Ongoing</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pickup-location" data-i18n="pickup_location">Pickup Location</label>
+                        <input type="text" id="pickup-location" name="pickup-location">
+                        </div>
+                        <div class="form-group">
+                        <label for="delivery-location" data-i18n="delivery_location">Delivery Location</label>
+                        <input type="text" id="delivery-location" name="delivery-location">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="additional-info" data-i18n="additional_info">Additional Information</label>
+                    <textarea id="additional-info" name="additional-info" placeholder="Any special requirements or additional details" data-i18n-placeholder="additional_info_placeholder"></textarea>
+                </div>
+                <button type="submit" class="cta-button" data-i18n="request_quote_btn">Request Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="shared-footer"></footer>
+
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="../script.js"></script>
+</body>
+</html>
