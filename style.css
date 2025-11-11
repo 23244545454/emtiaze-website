@@ -1588,10 +1588,11 @@ h2::after {
     grid-template-columns: 1fr 2fr;
     gap: 40px;
     align-items: center;
-    background: #f9f9f9;
+    background: var(--surface-secondary);
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
 }
 
 .service-detail:nth-child(even) {
@@ -1608,7 +1609,7 @@ h2::after {
 }
 
 .service-content h2 {
-    color: #003366;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -1731,10 +1732,11 @@ h2::after {
     grid-template-columns: 1fr 2fr;
     gap: 40px;
     align-items: start;
-    background: #f9f9f9;
+    background: var(--surface-secondary);
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
 }
 
 .project-detail:nth-child(even) {
@@ -1751,7 +1753,7 @@ h2::after {
 }
 
 .project-content h2 {
-    color: #003366;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
