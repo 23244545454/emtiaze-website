@@ -391,14 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const quoteForm = document.querySelector('.quote-form');
-    if (quoteForm) {
-        quoteForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your quote request. Our team will contact you shortly!');
-            quoteForm.reset();
-        });
-    }
+
 
     // Typing effect for hero title
     const typingElement = document.querySelector('.typing-effect');
