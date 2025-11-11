@@ -213,7 +213,15 @@ body {
 }
 
 [dir="ar"] .partners-logos {
+direction: rtl;
+}
+
+[dir="ar"] .partner-item {
     direction: rtl;
+}
+
+[dir="ar"] .partner-item i {
+    margin-left: var(--spacing-md);
 }
 
 [dir="ar"] .footer-content {
@@ -1373,19 +1381,51 @@ h2::after {
 
 .partner-item {
     background: var(--surface-primary);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    transition: var(--transition-normal);
+    transition: all var(--transition-normal);
     border: 1px solid var(--border-color);
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-primary);
+    position: relative;
+    overflow: hidden;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.partner-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transition: left var(--transition-slow);
+}
+
+.partner-item:hover::before {
+    left: 100%;
 }
 
 .partner-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--secondary-color);
+}
+
+.partner-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    transition: var(--transition-normal);
+}
+
+.partner-item:hover i {
+    color: var(--secondary-color);
+    transform: scale(1.1);
 }
 
 /* Team */
