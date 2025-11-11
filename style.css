@@ -70,7 +70,7 @@
 /* Dark mode specific overrides for cards */
 [data-theme="dark"] .service-card,
 [data-theme="dark"] .project-card,
-[data-theme="dark"] .partner-item {
+[data-theme="dark"] .client-item {
     background: var(--surface-primary);
     border-color: var(--border-color);
     color: var(--text-primary);
@@ -78,7 +78,7 @@
 
 [data-theme="dark"] .service-card h3,
 [data-theme="dark"] .project-card h3,
-[data-theme="dark"] .partner-item div {
+[data-theme="dark"] .client-item div {
     color: var(--primary-color);
 }
 
@@ -911,7 +911,7 @@ section.visible {
 }
 
 /* Page content spacing for sticky header */
-.partners-full,
+.clients-full,
 .about-full,
 .services-detailed,
 .projects-detailed,
@@ -921,7 +921,7 @@ section.visible {
 }
 
 /* Page intro text styling */
-.partners-full > .container > p,
+.clients-full > .container > p,
 .services-full > .container > p,
 .projects-full > .container > p {
     font-size: 1.1rem;
@@ -1265,7 +1265,7 @@ h2::after {
         gap: var(--spacing-lg);
     }
 
-    .partners-list {
+    .clients-list {
         grid-template-columns: 1fr;
     }
 
@@ -1434,20 +1434,20 @@ h2::after {
     background: linear-gradient(135deg, var(--secondary-hover), var(--secondary-color));
 }
 
-/* Partners */
-.partners-full {
+/* Clients */
+.clients-full {
     padding: var(--spacing-2xl) 0;
     background: var(--bg-primary);
 }
 
-.partners-list {
+.clients-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
 }
 
-.partner-item {
+.client-item {
     background: var(--surface-primary);
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
@@ -1463,7 +1463,7 @@ h2::after {
     line-height: 1.4;
 }
 
-.partner-item::before {
+.client-item::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1474,24 +1474,24 @@ h2::after {
     transition: left var(--transition-slow);
 }
 
-.partner-item:hover::before {
+.client-item:hover::before {
     left: 100%;
 }
 
-.partner-item:hover {
+.client-item:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: var(--shadow-xl);
     border-color: var(--secondary-color);
 }
 
-.partner-item i {
+.client-item i {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: var(--spacing-md);
     transition: var(--transition-normal);
 }
 
-.partner-item:hover i {
+.client-item:hover i {
     color: var(--secondary-color);
     transform: scale(1.1);
 }
