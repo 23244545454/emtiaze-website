@@ -920,6 +920,17 @@ section.visible {
     padding-top: calc(var(--spacing-2xl) + 80px);
 }
 
+/* Page intro text styling */
+.partners-full > .container > p,
+.services-full > .container > p,
+.projects-full > .container > p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 800px;
+}
+
 #home {
     opacity: 1;
     transform: none;
