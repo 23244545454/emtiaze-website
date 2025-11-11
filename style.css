@@ -244,8 +244,8 @@ margin-left: var(--spacing-md);
 [dir="ar"] .counter,
 [dir="ar"] .phone,
 [dir="ar"] .email {
-    direction: ltr;
-    text-align: left;
+direction: ltr;
+unicode-bidi: embed;
 }
 
 [dir="ar"] .footer-content {
