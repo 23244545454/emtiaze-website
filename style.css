@@ -237,7 +237,15 @@ direction: rtl;
 }
 
 [dir="ar"] .partner-item i {
-    margin-left: var(--spacing-md);
+margin-left: var(--spacing-md);
+}
+
+/* Force LTR for numbers in Arabic mode */
+[dir="ar"] .counter,
+[dir="ar"] .phone,
+[dir="ar"] .email {
+    direction: ltr;
+    text-align: left;
 }
 
 [dir="ar"] .footer-content {

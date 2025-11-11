@@ -45,11 +45,11 @@ function generateSharedHTML() {
     if (currentPath === '/pages/contact.html') contactHref = '#';
 
     const headerHTML = `
-        <div class="top-bar">
-            <div class="contact-info">
-                <span data-i18n="email">info@allianceofemtiaz.com</span>
-                <span data-i18n="phone">+966 55 839 1838</span>
-            </div>
+    <div class="top-bar">
+    <div class="contact-info">
+    <span class="email" data-i18n="email">info@allianceofemtiaz.com</span>
+    <span class="phone" data-i18n="phone">+966 55 839 1838</span>
+    </div>
             <div class="top-bar-right">
                 <select id="language-selector">
                 <option value="en" data-i18n="language_english">English</option>
@@ -90,11 +90,11 @@ function generateSharedHTML() {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 data-i18n="contact_information">Contact Information</h3>
-                    <p data-i18n="address">Address: Riyadh, Saudi Arabia</p>
-                    <p data-i18n="phone">Phone: +966 55 839 1838</p>
-                    <p data-i18n="email">Email: info@allianceofemtiaz.com</p>
-                    </div>
+                <h3 data-i18n="contact_information">Contact Information</h3>
+                <p data-i18n="address">Address: Riyadh, Saudi Arabia</p>
+                <p class="phone" data-i18n="phone">Phone: +966 55 839 1838</p>
+                <p class="email" data-i18n="email">Email: info@allianceofemtiaz.com</p>
+                </div>
                     <div class="footer-section">
                     <h3 data-i18n="important_links">Important Links</h3>
                     <ul>
