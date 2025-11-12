@@ -95,7 +95,7 @@
  }
 
  [data-theme="dark"] .contact-item p {
-     color: var(--text-secondary);
+     color: var(--text-primary);
  }
 
  [data-theme="dark"] .contact-item h3 {
