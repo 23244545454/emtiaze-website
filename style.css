@@ -1087,7 +1087,7 @@ h2::after {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     transition: var(--transition-normal);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--secondary-color);
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
@@ -1142,7 +1142,7 @@ h2::after {
     box-shadow: var(--shadow-md);
     text-align: center;
     transition: var(--transition-normal);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--secondary-color);
     animation: scaleIn 0.6s ease-out forwards;
 }
 
@@ -1222,7 +1222,7 @@ h2::after {
     position: relative;
     z-index: 2;
     transition: var(--transition-normal);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--secondary-color);
     max-width: 200px;
     flex: 1 1 200px;
     animation: fadeInUp 0.6s ease-out forwards;
@@ -1666,7 +1666,7 @@ section > .container > p:first-of-type {
 .service-card {
     text-align: center;
     padding: var(--spacing-2xl);
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--secondary-color);
     border-radius: var(--radius-xl);
     background: var(--surface-primary);
     box-shadow: 0 10px 30px -10px rgba(30, 58, 138, 0.2);
@@ -1735,7 +1735,7 @@ section > .container > p:first-of-type {
     padding: 50px;
     border-radius: var(--radius-xl);
     box-shadow: 0 10px 35px -10px rgba(30, 58, 138, 0.15);
-    border: 2px solid rgba(251, 191, 36, 0.1);
+    border: 2px solid var(--secondary-color);
     transition: all var(--transition-normal);
 }
 
@@ -1790,7 +1790,7 @@ section > .container > p:first-of-type {
 }
 
 .project-card {
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--secondary-color);
     border-radius: var(--radius-xl);
     overflow: hidden;
     background: var(--surface-primary);
@@ -1886,7 +1886,7 @@ section > .container > p:first-of-type {
     padding: 50px;
     border-radius: var(--radius-xl);
     box-shadow: 0 10px 35px -10px rgba(30, 58, 138, 0.15);
-    border: 2px solid rgba(251, 191, 36, 0.1);
+    border: 2px solid var(--secondary-color);
     transition: all var(--transition-normal);
 }
 
