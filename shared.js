@@ -87,32 +87,80 @@ function generateSharedHTML() {
     `;
 
     const footerHTML = `
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                 <h3 data-i18n="contact_information">Contact Information</h3>
-                 <p dir="ltr" data-i18n="address">Address: Riyadh, Saudi Arabia</p>
-                 <p class="phone"><span dir="ltr" data-i18n="phone">Phone: +966 55 839 1838</span></p>
-                 <p class="email"><span dir="ltr" data-i18n="email">Email: info@allianceofemtiaz.com</span></p>
-                 </div>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section footer-brand">
+                        <div class="footer-logo">
+                            <img src="${logoSrc}" alt="Emtiaze Company Logo">
+                            <span data-i18n="company_name">Tahaluf Alemtiaz Company Limited</span>
+                        </div>
+                        <p data-i18n="about_text">Tahaluf Alemtiaz Company Limited is a leading provider of transportation services for petroleum derivatives within the Kingdom.</p>
+                        <div class="footer-section-divider"></div>
+                    </div>
                     <div class="footer-section">
-                    <h3 data-i18n="important_links">Important Links</h3>
-                    <ul>
-                        <li><a href="${homeHref}" data-i18n="home">Home</a></li>
-                        <li><a href="${aboutHref}" data-i18n="about">About Us</a></li>
-                        <li><a href="${servicesHref}" data-i18n="services">Our Services</a></li>
-                        <li><a href="${projectsHref}" data-i18n="projects">Our Projects</a></li>
-                        <li><a href="${clientsHref}" data-i18n="clients">Clients</a></li>
-                        <li><a href="${quoteHref}" data-i18n="quote">Request a Quote</a></li>
-                        <li><a href="${contactHref}" data-i18n="contact">Contact Us</a></li>
-                    </ul>
+                        <h3 data-i18n="important_links">Important Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="${homeHref}" data-i18n="home">Home</a></li>
+                            <li><a href="${aboutHref}" data-i18n="about">About Us</a></li>
+                            <li><a href="${servicesHref}" data-i18n="services">Our Services</a></li>
+                            <li><a href="${projectsHref}" data-i18n="projects">Our Projects</a></li>
+                            <li><a href="${clientsHref}" data-i18n="clients">Clients</a></li>
+                            <li><a href="${quoteHref}" data-i18n="quote">Request a Quote</a></li>
+                            <li><a href="${contactHref}" data-i18n="contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3 data-i18n="contact_information">Contact Info</h3>
+                        <div class="contact-details-footer">
+                            <div class="contact-item-footer">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <p class="label" data-i18n="address">Address</p>
+                                    <p dir="ltr" data-i18n="address">Tabuk, Hay Karim, Abi Al-Qasim Al-Zahri, 47916</p>
+                                </div>
+                            </div>
+                            <div class="contact-item-footer">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <p class="label" data-i18n="phone">Phone</p>
+                                    <p dir="ltr">+966 55 839 1838</p>
+                                </div>
+                            </div>
+                            <div class="contact-item-footer">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <p class="label" data-i18n="email">Email</p>
+                                    <p dir="ltr">info@allianceofemtiaz.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3 data-i18n="follow_us">Follow Us</h3>
+                        <p data-i18n="newsletter_desc">Subscribe to our newsletter for the latest updates.</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" data-i18n-placeholder="email_placeholder">
+                            <button data-i18n="subscribe">Subscribe</button>
+                        </div>
+                        <div class="social-media footer-social">
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h3 data-i18n="follow_us">Follow Us</h3>
-                    <div class="social-media">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 <span data-i18n="company_name">Tahaluf Alemtiaz Company Limited</span>. All rights reserved.</p>
+                    <div class="footer-links-bottom">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
                     </div>
                 </div>
             </div>
@@ -197,12 +245,12 @@ function loadSharedComponents() {
 }
 
 // Call on DOM load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initTheme();
     loadSharedComponents();
 
     // Close menu when clicking overlay
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         const overlay = document.getElementById('nav-menu-overlay');
         const menu = document.getElementById('nav-menu');
         const toggleBtn = document.querySelector('.menu-toggle');
@@ -213,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             closeMenu();
         }

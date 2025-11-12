@@ -466,5 +466,36 @@ document.addEventListener('DOMContentLoaded', function() {
         counterObserver.observe(counter);
     });
 
+    // Clear form fields on page load and when returning from Formspree
+    clearFormFields();
+
+    // Also clear forms if page visibility changes (user returns to tab)
+    document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible') {
+            clearFormFields();
+        }
+    });
+
     console.log('Website loaded');
 });
+
+// Function to clear all form fields
+function clearFormFields() {
+    // Clear contact form
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.reset();
+    }
+
+    // Clear quote form
+    const quoteForm = document.querySelector('.quote-form');
+    if (quoteForm) {
+        quoteForm.reset();
+    }
+
+    // Clear any other forms on the page
+    const allForms = document.querySelectorAll('form');
+    allForms.forEach(form => {
+        form.reset();
+    });
+}
