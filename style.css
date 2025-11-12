@@ -106,6 +106,25 @@
     color: var(--text-light);
 }
 
+/* Dark mode for quote form */
+[data-theme="dark"] .quote-form {
+    background: var(--surface-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .quote-form .form-group input,
+[data-theme="dark"] .quote-form .form-group select,
+[data-theme="dark"] .quote-form .form-group textarea {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .quote-form .form-group input::placeholder,
+[data-theme="dark"] .quote-form .form-group textarea::placeholder {
+    color: var(--text-light);
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -1124,14 +1143,20 @@ h2::after {
 }
 
 .counter {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--primary-color);
-    display: block;
-    margin-bottom: var(--spacing-sm);
-    direction: ltr;
-    unicode-bidi: embed;
-}
+     font-size: 3rem;
+     font-weight: 800;
+     color: var(--primary-color);
+     display: block;
+     margin-bottom: var(--spacing-sm);
+     direction: ltr !important;
+     unicode-bidi: embed !important;
+ }
+
+ /* Ensure counter stays LTR in Arabic mode */
+ [dir="ar"] .counter {
+     direction: ltr !important;
+     unicode-bidi: embed !important;
+ }
 
 .stat-item p {
     font-size: 1rem;
@@ -1462,12 +1487,24 @@ section > .container > p:first-of-type {
     }
 
     /* Quote Page */
+    .quote-header h1 {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-md);
+    }
+
     .quote-form {
-        padding: 0 var(--spacing-md);
+        padding: 30px;
+        gap: 20px;
     }
 
     .form-row {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .quote-submit-btn {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: 1rem;
     }
 
     .quote-section .container {
@@ -2228,21 +2265,61 @@ section > .container > p:first-of-type {
 }
 
 /* Quote Section */
+/* Quote Section */
+.quote-section {
+    padding: var(--spacing-2xl) 0;
+    margin: 0;
+}
+
+.quote-section > .container {
+    max-width: 900px;
+}
+
+.quote-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.quote-header h1 {
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.quote-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .quote-form {
     display: grid;
-    gap: 20px;
-    max-width: 800px;
+    gap: 25px;
+    max-width: 900px;
     margin: 0 auto;
+    background: var(--surface-primary);
+    padding: 50px;
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 10px 35px -10px rgba(30, 58, 138, 0.15);
+    transition: all var(--transition-normal);
+}
+
+.quote-form:hover {
+    box-shadow: 0 15px 50px -10px rgba(30, 58, 138, 0.25), inset 0 1px 0 rgba(251, 191, 36, 0.15);
+    transform: translateY(-5px);
 }
 
 .quote-form .form-group label {
     color: var(--primary-color);
+    font-weight: 600;
 }
 
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 25px;
 }
 
 .form-group {
@@ -2251,24 +2328,57 @@ section > .container > p:first-of-type {
 }
 
 .form-group label {
-    margin-bottom: 5px;
-    font-weight: 500;
+    margin-bottom: 8px;
+    font-weight: 600;
     color: var(--primary-color);
+    font-size: 0.95rem;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 14px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
     font-family: inherit;
-    font-size: 16px;
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+    background: var(--bg-primary);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
 }
 
 .form-group textarea {
-    height: 120px;
+    height: 150px;
     resize: vertical;
+}
+
+.quote-submit-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    color: var(--surface-primary);
+    padding: var(--spacing-lg) var(--spacing-2xl);
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-md);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: var(--spacing-md);
+}
+
+.quote-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
 }
 
 /* Footer */
