@@ -90,9 +90,17 @@
 /* Dark mode for contact form */
 [data-theme="dark"] .contact-form-section,
 [data-theme="dark"] .contact-item {
-    background: var(--surface-primary);
-    color: var(--text-primary);
-}
+     background: var(--surface-primary);
+     color: var(--text-primary);
+ }
+
+ [data-theme="dark"] .contact-item p {
+     color: var(--text-secondary);
+ }
+
+ [data-theme="dark"] .contact-item h3 {
+     color: var(--primary-color);
+ }
 
 [data-theme="dark"] .form-group input,
 [data-theme="dark"] .form-group textarea {
