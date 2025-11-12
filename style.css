@@ -1129,6 +1129,8 @@ h2::after {
     color: var(--primary-color);
     display: block;
     margin-bottom: var(--spacing-sm);
+    direction: ltr;
+    unicode-bidi: embed;
 }
 
 .stat-item p {
