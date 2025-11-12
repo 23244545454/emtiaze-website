@@ -90,11 +90,11 @@ function generateSharedHTML() {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                <h3 data-i18n="contact_information">Contact Information</h3>
-                <p data-i18n="address">Address: Riyadh, Saudi Arabia</p>
-                <p class="phone"><span dir="ltr" data-i18n="phone">Phone: +966 55 839 1838</span></p>
-                <p class="email"><span dir="ltr" data-i18n="email">Email: info@allianceofemtiaz.com</span></p>
-                </div>
+                 <h3 data-i18n="contact_information">Contact Information</h3>
+                 <p dir="ltr" data-i18n="address">Address: Riyadh, Saudi Arabia</p>
+                 <p class="phone"><span dir="ltr" data-i18n="phone">Phone: +966 55 839 1838</span></p>
+                 <p class="email"><span dir="ltr" data-i18n="email">Email: info@allianceofemtiaz.com</span></p>
+                 </div>
                     <div class="footer-section">
                     <h3 data-i18n="important_links">Important Links</h3>
                     <ul>
