@@ -95,8 +95,6 @@ function generateSharedHTML() {
                             <img src="${logoSrc}" alt="Emtiaze Company Logo">
                             <span data-i18n="company_name">Tahaluf Alemtiaz Company Limited</span>
                         </div>
-                        <p data-i18n="about_text">Tahaluf Alemtiaz Company Limited is a leading provider of transportation services for petroleum derivatives within the Kingdom.</p>
-                        <div class="footer-section-divider"></div>
                     </div>
                     <div class="footer-section">
                         <h3 data-i18n="important_links">Important Links</h3>
@@ -138,11 +136,6 @@ function generateSharedHTML() {
                     </div>
                     <div class="footer-section">
                         <h3 data-i18n="follow_us">Follow Us</h3>
-                        <p data-i18n="newsletter_desc">Subscribe to our newsletter for the latest updates.</p>
-                        <div class="newsletter-form">
-                            <input type="email" placeholder="Enter your email" data-i18n-placeholder="email_placeholder">
-                            <button data-i18n="subscribe">Subscribe</button>
-                        </div>
                         <div class="social-media footer-social">
                             <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
                             <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
