@@ -2538,6 +2538,26 @@ footer::before {
     box-shadow: 0 10px 30px rgba(251, 191, 36, 0.15);
 }
 
+.footer-section:nth-child(2) {
+    background: rgba(255, 255, 255, 0.08);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    transition: all var(--transition-normal);
+}
+
+.footer-section:nth-child(2):hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.15);
+}
+
+.footer-section:nth-child(2) h3::before {
+    content: '🔗';
+    font-size: 1.5rem;
+    margin-right: var(--spacing-xs);
+}
+
 .footer-section h3 {
     margin-bottom: var(--spacing-lg);
     color: var(--secondary-color);
@@ -2556,6 +2576,7 @@ footer::before {
 .footer-section:first-child h3::before {
     content: '📍';
     font-size: 1.5rem;
+    margin-right: var(--spacing-xs);
 }
 
 .footer-section p {
@@ -2580,20 +2601,40 @@ footer::before {
     font-weight: 700;
 }
 
-.footer-section ul li {
-    margin-bottom: var(--spacing-sm);
-}
+.footer-section ul {
+     display: flex;
+     flex-direction: column;
+     gap: var(--spacing-md);
+ }
 
-.footer-section ul li a {
-    color: var(--surface-primary);
-    transition: all var(--transition-fast);
-    display: inline-block;
-}
+ .footer-section ul li {
+     margin-bottom: 0;
+     display: flex;
+     align-items: center;
+     gap: var(--spacing-sm);
+ }
 
-.footer-section ul li a:hover {
-    color: var(--secondary-color);
-    transform: translateX(4px);
-}
+ .footer-section ul li::before {
+     content: '→';
+     color: var(--secondary-color);
+     font-weight: 700;
+     font-size: 1.1rem;
+ }
+
+ .footer-section ul li a {
+     color: var(--surface-primary);
+     transition: all var(--transition-fast);
+     display: inline-block;
+     font-weight: 500;
+     padding: var(--spacing-xs) var(--spacing-sm);
+     border-radius: var(--radius-sm);
+ }
+
+ .footer-section ul li a:hover {
+     color: var(--secondary-color);
+     transform: translateX(4px);
+     background: rgba(251, 191, 36, 0.1);
+ }
 
 .footer-section .social-media {
     display: flex;
