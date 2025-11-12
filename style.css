@@ -359,8 +359,9 @@ header {
 
 .contact-info span {
     margin-right: var(--spacing-lg);
-    font-weight: 500;
-    color: var(--surface-primary);
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 0.95rem;
 }
 
 .social-media {
@@ -2020,7 +2021,8 @@ section > .container > p:first-of-type {
 
 .footer-section .phone,
 .footer-section .email {
-    color: var(--surface-primary);
+    color: #ffffff;
+    font-weight: 600;
 }
 
 /* Contact Full */
