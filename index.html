@@ -229,13 +229,51 @@
 
     <section class="newsletter">
         <div class="container">
-            <div class="newsletter-content">
-                <h2 data-i18n="stay_updated">Stay Updated</h2>
-                <p data-i18n="newsletter_desc">Subscribe to our newsletter for the latest updates on petroleum derivatives transportation.</p>
-                <form class="newsletter-form" action="https://formspree.io/f/xldaddbp" method="POST">
-                    <input type="email" name="email" placeholder="Enter your email" data-i18n-placeholder="email_placeholder" required>
-                    <button type="submit" class="cta-button" data-i18n="subscribe">Subscribe</button>
-                </form>
+            <div class="newsletter-wrapper">
+                <div class="newsletter-header">
+                    <div class="newsletter-badge" data-i18n="newsletter_badge">Latest News & Updates</div>
+                    <h2 data-i18n="stay_updated">Stay Updated with Industry Insights</h2>
+                    <p data-i18n="newsletter_desc">Subscribe to our newsletter for the latest updates on petroleum derivatives transportation and industry trends.</p>
+                </div>
+
+                <div class="newsletter-content">
+                    <div class="newsletter-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <p data-i18n="newsletter_benefit1">Real-time updates</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p data-i18n="newsletter_benefit2">Weekly digest</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <p data-i18n="newsletter_benefit3">Industry insights</p>
+                        </div>
+                    </div>
+
+                    <form class="newsletter-form-modern" action="https://formspree.io/f/xldaddbp" method="POST">
+                        <div class="form-input-wrapper">
+                            <input 
+                                type="email" 
+                                name="email" 
+                                placeholder="Enter your email address" 
+                                data-i18n-placeholder="email_placeholder" 
+                                required>
+                            <button type="submit" class="newsletter-btn" data-i18n="subscribe">
+                                <span data-i18n="subscribe">Subscribe</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <p class="form-disclaimer" data-i18n="newsletter_privacy">We respect your privacy. Unsubscribe at any time.</p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
