@@ -307,7 +307,7 @@ margin-left: var(--spacing-md);
 
 a {
     text-decoration: none;
-    color: #003366;
+    color: var(--primary-color);
 }
 
 ul {
@@ -360,6 +360,7 @@ header {
 .contact-info span {
     margin-right: var(--spacing-lg);
     font-weight: 500;
+    color: var(--surface-primary);
 }
 
 .social-media {
@@ -1653,7 +1654,7 @@ section > .container > p:first-of-type {
 
 .team-member h3 {
     margin-bottom: 5px;
-    color: #003366;
+    color: var(--primary-color);
 }
 
 /* Services */
@@ -2001,7 +2002,7 @@ section > .container > p:first-of-type {
 .form-group label {
     margin-bottom: 5px;
     font-weight: 500;
-    color: #003366;
+    color: var(--primary-color);
 }
 
 .form-group input,
@@ -2017,6 +2018,11 @@ section > .container > p:first-of-type {
     resize: vertical;
 }
 
+.footer-section .phone,
+.footer-section .email {
+    color: var(--surface-primary);
+}
+
 /* Contact Full */
 .contact-content {
     display: grid;
@@ -2026,7 +2032,7 @@ section > .container > p:first-of-type {
 }
 
 .contact-info-section h2 {
-    color: #003366;
+    color: var(--primary-color);
     margin-bottom: 30px;
 }
 
@@ -2036,7 +2042,7 @@ section > .container > p:first-of-type {
 }
 
 .contact-item h3 {
-    color: #003366;
+    color: var(--primary-color);
     margin-bottom: 5px;
 }
 
@@ -2050,6 +2056,10 @@ section > .container > p:first-of-type {
     gap: 20px;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.quote-form .form-group label {
+    color: var(--primary-color);
 }
 
 .form-row {
@@ -2066,7 +2076,7 @@ section > .container > p:first-of-type {
 .form-group label {
     margin-bottom: 5px;
     font-weight: 500;
-    color: #003366;
+    color: var(--primary-color);
 }
 
 .form-group input,
