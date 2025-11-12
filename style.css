@@ -1158,6 +1158,17 @@ h2::after {
      unicode-bidi: embed !important;
  }
 
+ /* Keep numeric content LTR in Arabic mode */
+ [dir="ar"] .contact-item p {
+     direction: ltr;
+     unicode-bidi: plaintext;
+ }
+
+ [dir="ar"] .hours {
+     direction: ltr;
+     unicode-bidi: plaintext;
+ }
+
 .stat-item p {
     font-size: 1rem;
     color: var(--text-secondary);
