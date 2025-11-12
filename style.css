@@ -2227,19 +2227,19 @@ section > .container > p:first-of-type {
 }
 
 .contact-item {
-    background: var(--surface-primary);
-    padding: 30px;
-    border-radius: var(--radius-lg);
-    border-left: 4px solid var(--secondary-color);
-    box-shadow: var(--shadow-sm);
-    transition: all var(--transition-normal);
-}
+     background: var(--surface-primary);
+     padding: 30px;
+     border-radius: var(--radius-lg);
+     border: 2px solid var(--secondary-color);
+     box-shadow: var(--shadow-sm);
+     transition: all var(--transition-normal);
+ }
 
-.contact-item:hover {
-    transform: translateX(8px);
-    box-shadow: var(--shadow-md);
-    border-left-color: var(--primary-color);
-}
+ .contact-item:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 15px 40px -10px rgba(30, 58, 138, 0.25);
+     border-color: var(--secondary-color);
+ }
 
 .contact-item h3 {
     color: var(--primary-color);
