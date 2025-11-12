@@ -1614,11 +1614,18 @@ h2::after {
     grid-template-columns: 1fr 2fr;
     gap: 40px;
     align-items: center;
-    background: var(--surface-secondary);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
+    background: var(--surface-primary);
+    padding: 50px;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 35px -10px rgba(30, 58, 138, 0.15);
+    border: 2px solid rgba(251, 191, 36, 0.1);
+    transition: all var(--transition-normal);
+}
+
+.service-detail:hover {
+    box-shadow: 0 15px 50px -10px rgba(30, 58, 138, 0.25), inset 0 1px 0 rgba(251, 191, 36, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(251, 191, 36, 0.3);
 }
 
 .service-detail:nth-child(even) {
@@ -1758,11 +1765,18 @@ h2::after {
     grid-template-columns: 1fr 2fr;
     gap: 40px;
     align-items: start;
-    background: var(--surface-secondary);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
+    background: var(--surface-primary);
+    padding: 50px;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 35px -10px rgba(30, 58, 138, 0.15);
+    border: 2px solid rgba(251, 191, 36, 0.1);
+    transition: all var(--transition-normal);
+}
+
+.project-detail:hover {
+    box-shadow: 0 15px 50px -10px rgba(30, 58, 138, 0.25), inset 0 1px 0 rgba(251, 191, 36, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(251, 191, 36, 0.3);
 }
 
 .project-detail:nth-child(even) {
