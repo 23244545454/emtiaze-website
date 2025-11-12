@@ -700,7 +700,7 @@ overflow: hidden;
 .shape {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.25);
     animation: float 6s ease-in-out infinite;
 }
 
@@ -764,12 +764,12 @@ overflow: hidden;
     z-index: 2;
     max-width: 640px;
     margin: 0 var(--spacing-xl);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(30px);
     padding: var(--spacing-2xl);
     border-radius: var(--radius-xl);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: var(--shadow-xl);
+    border: 2px solid rgba(251, 191, 36, 0.3);
+    box-shadow: 0 20px 60px -10px rgba(30, 58, 138, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.6);
     animation: slideInUp 1s ease-out;
 }
 
@@ -793,6 +793,7 @@ background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
 -webkit-text-fill-color: transparent;
 background-clip: text;
 line-height: 1.2;
+text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .typing-effect::after {
@@ -864,6 +865,7 @@ line-height: 1.2;
     color: var(--text-secondary);
     line-height: 1.6;
     font-weight: 400;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button {
@@ -878,8 +880,8 @@ line-height: 1.2;
     transition: all var(--transition-normal);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border: none;
-    box-shadow: var(--shadow-lg);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 8px 20px -5px rgba(251, 191, 36, 0.4);
     font-size: 1rem;
     cursor: pointer;
     position: relative;
@@ -902,9 +904,10 @@ line-height: 1.2;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 28px -5px rgba(251, 191, 36, 0.5);
     background: linear-gradient(135deg, var(--secondary-hover), var(--secondary-color));
+    border-color: var(--primary-color);
 }
 
 /* Sections */
