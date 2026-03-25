@@ -344,7 +344,7 @@ function updateLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.dataset.i18n;
         if (translations[lang][key]) {
-            element.textContent = translations[lang][key];
+            element.innerHTML = translations[lang][key];
         }
     });
 
@@ -627,7 +627,7 @@ function clearFormFields() {
     function openWhatsAppQuote() {
     // Open WhatsApp with pre-filled message
     const phoneNumber = '966558391838';
-    const message = encodeURIComponent('Hello, I would like to request a quote for petroleum derivatives transportation.');
+    const message = encodeURIComponent('مرحبا شركة تحالف الامتياز, أود طلب عرض سعر لنقل مشتقات النفط.');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
     closeQuoteModal();
