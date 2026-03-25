@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://23244545454.github.io/emtiaze-website/sitemap.xml
