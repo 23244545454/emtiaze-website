@@ -228,6 +228,32 @@ header {
     border-color: var(--primary-color);
 }
 
+/* Floating WhatsApp */
+.floating-whatsapp {
+    position: fixed;
+    bottom: var(--spacing-xl);
+    left: var(--spacing-xl);
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all var(--transition-normal);
+    text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    color: #ffffff;
+}
+
 /* RTL Support for Arabic */
 [dir="ar"] {
     font-family: 'Noto Sans Arabic', sans-serif;
@@ -2949,8 +2975,8 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
 }
 
 .footer-section {
@@ -3362,8 +3388,8 @@ footer::before {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
     padding: var(--spacing-lg);
 }
 
