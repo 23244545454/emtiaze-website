@@ -458,9 +458,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-xl) var(--spacing-xl);
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: var(--spacing-md) 40px; /* Reduced vertical, maintained horizontal padding */
+    max-width: none !important; /* Full width */
+    width: 100% !important;
+    margin: 0 !important;
 }
 
 .header-actions {
@@ -511,25 +512,9 @@ nav ul li a {
     overflow: hidden;
 }
 
-nav ul li a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
-    transition: left var(--transition-normal);
-}
-
-nav ul li a:hover::before {
-    left: 100%;
-}
-
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
 }
 
 /* Dark Mode Toggle */
@@ -4285,8 +4270,9 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px var(--spacing-xl);
-    max-width: 1400px;
+    padding: 15px 40px !important;
+    max-width: none !important;
+    width: 100% !important;
 }
 
 /* RTL orientation for the new header container */

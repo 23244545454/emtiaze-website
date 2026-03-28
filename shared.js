@@ -47,64 +47,51 @@ function generateSharedHTML() {
     const headerHTML = `
         <style>
            .new-design-header {
-               background: #f8f8f8 !important;
-               box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+               background: #ffffff !important;
+               box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
                border-bottom: 1px solid rgba(0,0,0,0.05);
+               width: 100% !important;
+               position: fixed;
+               top: 0;
+               left: 0;
+               z-index: 2000;
            }
            .new-header-container {
-               padding: 10px 0;
+               padding: 10px 40px !important; /* Increased padding for full-width look */
                display: flex;
                justify-content: space-between;
                align-items: center;
-               direction: rtl; /* Force RTL reading order */
+               direction: rtl; 
+               max-width: none !important; /* Force full width */
+               width: 100% !important;
+               margin: 0 !important;
            }
            .desktop-nav { background: transparent !important; }
            .desktop-nav ul {
                display: flex;
                align-items: center;
-               gap: 35px !important;
+               gap: 30px !important;
                list-style: none;
                margin: 0;
                padding: 0;
                background: transparent !important;
            }
            .desktop-nav ul li {
-               border: none !important;
                margin: 0 !important;
                padding: 0 !important;
-               background: transparent !important;
-               box-shadow: none !important;
-           }
-           .desktop-nav ul li::after, .desktop-nav ul li::before {
-               display: none !important;
-               background: none !important;
            }
            .desktop-nav ul li a {
                color: #111 !important;
-               font-weight: 800 !important;
-               font-size: 1.15rem !important;
+               font-weight: 700 !important;
+               font-size: 1.05rem !important;
                text-decoration: none !important;
-               padding: 10px 0 !important;
+               padding: 8px 0 !important;
                position: relative;
                white-space: nowrap !important;
                font-family: 'Cairo', sans-serif;
-               border: none !important;
-               background: transparent !important;
-               box-shadow: none !important;
-           }
-           .desktop-nav ul li a::before, .desktop-nav ul li a::after {
-               content: none !important;
-               display: none !important;
-               background: none !important;
-               box-shadow: none !important;
            }
            .desktop-nav ul li a:hover {
                color: #e31e24 !important;
-               background: transparent !important;
-           }
-           .desktop-nav ul li a.active {
-               color: #e31e24 !important;
-               border-bottom: 2px solid #e31e24 !important;
            }
            .header-left-actions {
                display: flex;
@@ -112,46 +99,67 @@ function generateSharedHTML() {
                gap: 15px;
            }
            .header-contact-outline {
-               background: rgba(0,0,0,0.03);
+               background: #e31e24;
                border: 1px solid #e31e24;
-               color: #111;
-               font-weight: 800;
+               color: #fff;
+               font-weight: 700;
                font-family: 'Cairo', sans-serif;
-               font-size: 1.1rem;
-               padding: 8px 30px;
-               border-radius: 4px;
+               font-size: 1rem;
+               padding: 10px 25px;
+               border-radius: 6px;
                cursor: pointer;
                transition: 0.3s;
            }
            .header-contact-outline:hover {
-               background: #e31e24;
-               color: #fff;
+               background: #c8181f;
+               border-color: #c8181f;
            }
            .header-lang-box {
                display: flex;
                align-items: center;
-               gap: 10px;
-               background: #fff;
-               border: 1px solid #eaeaea;
-               padding: 5px 15px;
-               border-radius: 4px;
-               box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+               gap: 8px;
+               background: #f8f8f8;
+               border: 1px solid #eee;
+               padding: 8px 15px;
+               border-radius: 6px;
                cursor: pointer;
                font-family: 'Inter', sans-serif;
-               font-weight: 800;
+               font-weight: 700;
                color: #333;
            }
-           .header-lang-box:hover {
-               background: #fdfdfd;
+           
+           /* Mobile Menu Toggle Styling */
+           .mobile-menu-toggle {
+               display: none; /* Hide on desktop by default */
+               background: none;
+               border: none;
+               cursor: pointer;
+               padding: 5px;
+               z-index: 2001;
            }
-           .lang-arrow { font-size: 0.8rem; color: #555; }
+
+           /* Responsive Breakpoint */
+           @media (max-width: 1100px) {
+               .desktop-nav {
+                   display: none !important;
+               }
+               .header-left-actions {
+                   display: none !important;
+               }
+               .mobile-menu-toggle {
+                   display: block !important;
+               }
+               .new-header-container {
+                   padding: 10px 20px !important;
+               }
+           }
         </style>
 
         <div class="main-header new-design-header">
             <div class="container new-header-container">
                 <!-- LOGO ON FAR RIGHT (Start of RTL container) -->
                 <div class="logo">
-                    <img src="${logoSrc}" alt="Emtiaze Company Logo" style="max-height: 55px;">
+                    <img src="${logoSrc}" alt="Emtiaze Company Logo" style="max-height: 130px;">
                     <span data-i18n="company_name" style="display:none;">Tahaluf Alemtiaz</span>
                 </div>
                 
@@ -262,17 +270,28 @@ function generateSharedHTML() {
         <div class="nav-menu" id="nav-menu">
             <div class="menu-header">
                 <img src="${logoSrc}" alt="Emtiaze Company Logo">
-                <span data-i18n="company_name">Tahaluf Alemtiaz Company Limited</span>
+                <span style="font-family: 'Cairo', sans-serif;">شركة تحالف الامتياز</span>
             </div>
+            
+            <div class="menu-lang-switcher">
+                <div class="header-lang-box" style="margin: 0; width: 100%; justify-content: center; background: rgba(0,0,0,0.03); border-color: rgba(227,30,36,0.1);">
+                    <i class="fas fa-chevron-up lang-arrow"></i>
+                    <span style="font-size: 1.1rem; margin: 0 10px;">ARABIC (AR)</span>
+                    <img src="${isInPages ? '../images/saudi_flag.png' : 'images/saudi_flag.png'}" alt="Saudi Flag" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                </div>
+            </div>
+
             <ul class="nav-links">
-            <li><a href="${homeHref}" onclick="closeMenu()"><i class="fas fa-home"></i><span data-i18n="home">Home</span></a></li>
-            <li><a href="${aboutHref}" onclick="closeMenu()"><i class="fas fa-info-circle"></i><span data-i18n="about">About Us</span></a></li>
-            <li><a href="${servicesHref}" onclick="closeMenu()"><i class="fas fa-cogs"></i><span data-i18n="services">Our Services</span></a></li>
-            <li><a href="${projectsHref}" onclick="closeMenu()"><i class="fas fa-project-diagram"></i><span data-i18n="projects">Our Projects</span></a></li>
-            <li><a href="${clientsHref}" onclick="closeMenu()"><i class="fas fa-users"></i><span data-i18n="clients">Clients</span></a></li>
-            <li><a href="${quoteHref}" onclick="closeMenu()"><i class="fas fa-quote-right"></i><span data-i18n="quote">Request Quote</span></a></li>
-            <li><a href="${contactHref}" onclick="closeMenu()"><i class="fas fa-envelope"></i><span data-i18n="contact">Contact Us</span></a></li>
+                <li><a href="${homeHref}" onclick="closeMenu()"><i class="fas fa-home"></i> الصفحة الرئيسية</a></li>
+                <li><a href="${aboutHref}" onclick="closeMenu()"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                <li><a href="${servicesHref}" onclick="closeMenu()"><i class="fas fa-cogs"></i> خدماتنا</a></li>
+                <li><a href="${projectsHref}" onclick="closeMenu()"><i class="fas fa-project-diagram"></i> مشاريعنا</a></li>
+                <li><a href="${contactHref}" onclick="closeMenu()"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
             </ul>
+
+            <div class="menu-footer-action">
+                <button class="header-contact-outline" style="width: 100%; padding: 15px;" onclick="window.location.href='${contactHref}'">التواصل والاستفسار</button>
+            </div>
         </div>
     `;
 
