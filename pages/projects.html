@@ -1,93 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects - Emtiaze Company</title>
+    <title>مشاريعنا - شركة تحالف الامتياز</title>
+    <meta name="description" content="استكشف مشاريع شركة تحالف الامتياز الناجحة في نقل المحروقات والبضائع عبر المملكة العربية السعودية.">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="../shared.js"></script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; margin: 0; background: #fff; }
+        .project-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff; padding: 6px 16px; border-radius: 50px;
+            font-size: 0.9rem; font-weight: 600; margin: 4px 4px 0 0;
+            backdrop-filter: blur(4px);
+        }
+        .project-tags { display: flex; flex-wrap: wrap; margin-top: 15px; }
+        .project-bento-card.large { grid-column: span 2; min-height: 500px; }
+    </style>
 </head>
 <body>
-    <div id="preloader">
-    <div class="spinner"></div>
-    </div>
     <header id="shared-header"></header>
 
-    <section class="projects-full">
+    <!-- Hero Banner -->
+    <section class="subpage-hero">
+        <img class="subpage-hero-bg" src="../images/reyadh_season.png" alt="Projects Hero" onerror="this.src='../images/hero_modern.png'">
+        <div class="subpage-hero-overlay"></div>
+        <div class="subpage-hero-content container">
+            <h1 class="subpage-hero-title">مشاريعنا</h1>
+            <p class="subpage-hero-subtitle">نفخر بإنجازاتنا الكبرى في خدمة الفعاليات والمشاريع الوطنية الكبرى بأعلى مستويات الجودة والالتزام</p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section style="background: #e31e24; padding: 40px 0; direction: rtl;">
         <div class="container">
-            <h1 data-i18n="our_projects">Our Projects</h1>
-            <p data-i18n="projects_intro">Explore our successful projects showcasing our expertise in petroleum derivatives transportation across the Kingdom.</p>
-            <div class="projects-detailed">
-                <div class="project-detail">
-                    <div class="project-image">
-                        <img src="../images/reyadh_season.png" alt="Riyadh Season Fuel Supply" data-i18n-alt="alt_project_riyadh">
-                    </div>
-                    <div class="project-content">
-                    <h2 data-i18n="project1_title">Riyadh Season Fuel Supply</h2>
-                    <p data-i18n="project1_desc">This major project involved ensuring uninterrupted fuel supply for all events during Riyadh Season. Our team coordinated with multiple stakeholders to deliver millions of liters of fuel safely and on time, powering the festivities and supporting the economic boost.</p>
-                    <ul>
-                    <li data-i18n="project1_detail1">Volume: 5 million liters</li>
-                    <li data-i18n="project1_detail2">Duration: 2 months</li>
-                    <li data-i18n="project1_detail3">Locations: Multiple venues across Riyadh</li>
-                    <li data-i18n="project1_detail4">Outcome: 100% on-time delivery</li>
-                    </ul>
-                    </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; color: #fff;">
+                <div>
+                    <h3 style="font-size: 3rem; font-weight: 900; margin: 0;">+100</h3>
+                    <p style="margin: 5px 0; font-weight: 600; opacity: 0.9;">مشروع منجز</p>
                 </div>
-                <div class="project-detail">
-                    <div class="project-image">
-                        <img src="../images/formel.png" alt="Formula 1 Jeddah Fuel Supply" data-i18n-alt="alt_project_f1">
-                    </div>
-                    <div class="project-content">
-                    <h2 data-i18n="project2_title">Formula 1 Jeddah Fuel Supply</h2>
-                    <p data-i18n="project2_desc">As part of the inaugural Formula 1 event in Jeddah, we provided specialized fuel transportation services. Our high-precision operations ensured that the racing fuel met strict specifications and was delivered securely to the circuit.</p>
-                    <ul>
-                    <li data-i18n="project2_detail1">Specialized racing fuel</li>
-                    <li data-i18n="project2_detail2">High-security protocols</li>
-                    <li data-i18n="project2_detail3">Real-time monitoring</li>
-                    <li data-i18n="project2_detail4">Environmental compliance</li>
-                    </ul>
-                    </div>
+                <div>
+                    <h3 style="font-size: 3rem; font-weight: 900; margin: 0;">5M+</h3>
+                    <p style="margin: 5px 0; font-weight: 600; opacity: 0.9;">لتر محروقات نُقل</p>
                 </div>
-                <div class="project-detail">
-                    <div class="project-image">
-                        <img src="../images/form.png" alt="The Line Project Fuel Delivery" data-i18n-alt="alt_project_line">
-                    </div>
-                    <div class="project-content">
-                    <h2 data-i18n="project3_title">The Line Project Fuel Delivery</h2>
-                    <p data-i18n="project3_desc">Supporting the ambitious NEOM The Line project, we established regular fuel delivery routes to construction sites. Our logistical expertise ensured consistent supply despite challenging terrain and remote locations.</p>
-                    <ul>
-                    <li data-i18n="project3_detail1">Regular deliveries to remote sites</li>
-                    <li data-i18n="project3_detail2">Custom routing for desert terrain</li>
-                    <li data-i18n="project3_detail3">Weather contingency planning</li>
-                    <li data-i18n="project3_detail4">Sustainable fuel options</li>
-                    </ul>
-                    </div>
+                <div>
+                    <h3 style="font-size: 3rem; font-weight: 900; margin: 0;">100%</h3>
+                    <p style="margin: 5px 0; font-weight: 600; opacity: 0.9;">التسليم في الوقت المحدد</p>
                 </div>
-                <div class="project-detail">
-                    <div class="project-image">
-                        <img src="../images/nationlaevents.png" alt="National Events Support" data-i18n-alt="alt_project_events">
-                    </div>
-                    <div class="project-content">
-                    <h2 data-i18n="project4_title">National Events Support</h2>
-                    <p data-i18n="project4_desc">We have partnered with various national events across Saudi Arabia, providing fuel transportation for cultural festivals, sporting events, and government initiatives. Our scalable solutions adapt to events of all sizes.</p>
-                    <ul>
-                    <li data-i18n="project4_detail1">Diverse event types</li>
-                    <li data-i18n="project4_detail2">Scalable operations</li>
-                    <li data-i18n="project4_detail3">Multi-city coordination</li>
-                    <li data-i18n="project4_detail4">Emergency response capability</li>
-                    </ul>
-                    </div>
+                <div>
+                    <h3 style="font-size: 3rem; font-weight: 900; margin: 0;">+240</h3>
+                    <p style="margin: 5px 0; font-weight: 600; opacity: 0.9;">عميل راضٍ</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Grid -->
+    <section class="premium-projects-container">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; font-weight: 800; color: #111; margin-bottom: 15px;">أبرز مشاريعنا</h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">شراكات استراتيجية وإنجازات استثنائية في خدمة أكبر الفعاليات والمشاريع الوطنية</p>
+            </div>
+
+            <div class="projects-gallery-grid">
+
+                <!-- Project 1: Riyadh Season (LARGE CARD) -->
+                <div class="project-bento-card large" style="grid-column: span 2;">
+                    <img src="../images/reyadh_season.png" alt="موسم الرياض" onerror="this.src='../images/hero_modern.png'">
+                    <div class="project-bento-overlay"></div>
+                    <div class="project-bento-content">
+                        <h2>موسم الرياض - إمداد الوقود</h2>
+                        <p>تولّينا مهمة ضمان إمداد الوقود المتواصل لجميع فعاليات موسم الرياض. نسّق فريقنا مع أطراف متعددة لتوصيل ملايين اللترات من الوقود بأمان وفي الموعد المحدد.</p>
+                        <div class="project-tags">
+                            <span class="project-tag"><i class="fas fa-tint"></i> 5 مليون لتر</span>
+                            <span class="project-tag"><i class="fas fa-calendar"></i> شهران</span>
+                            <span class="project-tag"><i class="fas fa-map-marker-alt"></i> مواقع متعددة في الرياض</span>
+                            <span class="project-tag"><i class="fas fa-check-circle"></i> تسليم 100% في الوقت</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Formula 1 -->
+                <div class="project-bento-card">
+                    <img src="../images/formel.png" alt="فورمولا 1 جدة" onerror="this.src='../images/hero_modern.png'">
+                    <div class="project-bento-overlay"></div>
+                    <div class="project-bento-content">
+                        <h2>سباق الفورمولا 1 - جدة</h2>
+                        <p>خدمات نقل وقود متخصصة للحدث الأول من نوعه في جدة. عمليات دقيقة بأعلى معايير الأمان.</p>
+                        <div class="project-tags">
+                            <span class="project-tag"><i class="fas fa-flag-checkered"></i> وقود سباقات متخصص</span>
+                            <span class="project-tag"><i class="fas fa-shield-alt"></i> بروتوكولات أمنية عالية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: The Line NEOM -->
+                <div class="project-bento-card">
+                    <img src="../images/form.png" alt="مشروع ذا لاين" onerror="this.src='../images/hero_modern.png'">
+                    <div class="project-bento-overlay"></div>
+                    <div class="project-bento-content">
+                        <h2>مشروع ذا لاين - نيوم</h2>
+                        <p>إمداد منتظم بالوقود لمواقع بناء مشروع نيوم الطموح. خبرتنا اللوجستية ضمنت توريداً متواصلاً رغم تحديات التضاريس.</p>
+                        <div class="project-tags">
+                            <span class="project-tag"><i class="fas fa-route"></i> طرق مخصصة للصحراء</span>
+                            <span class="project-tag"><i class="fas fa-leaf"></i> خيارات وقود مستدامة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: National Events -->
+                <div class="project-bento-card" style="grid-column: span 2;">
+                    <img src="../images/nationlaevents.png" alt="الفعاليات الوطنية" onerror="this.src='../images/hero_modern.png'">
+                    <div class="project-bento-overlay"></div>
+                    <div class="project-bento-content">
+                        <h2>دعم الفعاليات الوطنية</h2>
+                        <p>شراكات استراتيجية مع فعاليات وطنية متنوعة عبر المملكة العربية السعودية، بما في ذلك المهرجانات الثقافية والفعاليات الرياضية والمبادرات الحكومية. حلولنا القابلة للتوسيع تتكيف مع فعاليات من جميع الأحجام.</p>
+                        <div class="project-tags">
+                            <span class="project-tag"><i class="fas fa-star"></i> فعاليات متنوعة</span>
+                            <span class="project-tag"><i class="fas fa-expand-arrows-alt"></i> عمليات قابلة للتوسيع</span>
+                            <span class="project-tag"><i class="fas fa-city"></i> تنسيق متعدد المدن</span>
+                            <span class="project-tag"><i class="fas fa-exclamation-triangle"></i> استجابة طوارئ فورية</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: linear-gradient(135deg, #23312c 0%, #0a1f18 100%); padding: 80px 0; text-align: center; direction: rtl;">
+        <div class="container">
+            <h2 style="color: #fff; font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">انضم إلى قائمة عملائنا الناجحين</h2>
+            <p style="color: #aaa; font-size: 1.2rem; margin-bottom: 40px;">تواصل معنا لمناقشة مشروعك القادم وكيف يمكننا مساعدتك في تحقيق أهدافك</p>
+            <a href="contact.html" style="background: #e31e24; color: #fff; padding: 18px 50px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 1.2rem; display: inline-block;">ابدأ مشروعك معنا</a>
+        </div>
+    </section>
+
     <footer id="shared-footer"></footer>
-
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
-
     <script src="../script.js"></script>
 </body>
 </html>

@@ -1,78 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Tahaluf Alemtiaz Company Limited</title>
+    <title>خدماتنا - شركة تحالف الامتياز</title>
+    <meta name="description" content="استكشف الخدمات المتكاملة التي تقدمها شركة تحالف الامتياز لنقل المحروقات والبضائع في المملكة العربية السعودية.">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="../shared.js"></script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; margin: 0; background: #f8f8f8; }
+        .service-split-row { margin-bottom: 60px; }
+    </style>
 </head>
 <body>
-    <div id="preloader">
-    <div class="spinner"></div>
-    </div>
     <header id="shared-header"></header>
 
-    <section class="services-full">
+    <!-- Hero Banner -->
+    <section class="subpage-hero">
+        <img class="subpage-hero-bg" src="../images/hero_modern.png" alt="Services Hero">
+        <div class="subpage-hero-overlay"></div>
+        <div class="subpage-hero-content container">
+            <h1 class="subpage-hero-title">خدماتنا</h1>
+            <p class="subpage-hero-subtitle">نقدم حلولاً متكاملة لنقل المحروقات والبضائع بأعلى معايير السلامة والاحترافية في المملكة العربية السعودية</p>
+        </div>
+    </section>
+
+    <!-- Services Content -->
+    <section class="premium-service-container">
         <div class="container">
-            <h1 data-i18n="our_services">Our Services</h1>
-            <p data-i18n="services_intro">At Tahaluf Alemtiaz Company Limited, we offer comprehensive transportation solutions for petroleum derivatives, ensuring safety, efficiency, and reliability in every operation.</p>
-            <div class="services-detailed">
-                <div class="service-detail">
-                    <div class="service-image">
-                        <img src="../images/transportation.png" alt="Petroleum Derivatives Transportation" data-i18n-alt="alt_service_transport">
-                    </div>
-                    <div class="service-content">
-                    <h2><i class="fas fa-arrow-right"></i> <span data-i18n="service1_title">Petroleum Derivatives Transportation</span></h2>
-                    <p data-i18n="service1_desc">We specialize in the safe and efficient transportation of all types of petroleum derivatives, including diesel, gasoline, and other refined products. Our modern fleet is equipped with the latest safety features and GPS tracking systems to ensure real-time monitoring and secure delivery.</p>
-                    <ul>
-                    <li data-i18n="service1_feature1">24/7 transportation services</li>
-                    <li data-i18n="service1_feature2">State-of-the-art tanker trucks</li>
-                    <li data-i18n="service1_feature3">Compliance with international safety standards</li>
-                    <li data-i18n="service1_feature4">Real-time tracking and reporting</li>
-                    </ul>
-                    </div>
+
+            <!-- Service 1: Petroleum Transport -->
+            <div class="service-split-row">
+                <div class="service-img-box">
+                    <img src="../images/transportation.png" alt="نقل المحروقات" onerror="this.src='../images/red_truck.png'">
+                    <div class="service-icon-float"><i class="fas fa-gas-pump"></i></div>
                 </div>
-                <div class="service-detail">
-                    <div class="service-image">
-                        <img src="../images/logistic.png" alt="Logistical Solutions" data-i18n-alt="alt_service_logistics">
-                    </div>
-                    <div class="service-content">
-                    <h2><i class="fas fa-arrow-right"></i> <span data-i18n="service2_title">Logistical Solutions</span></h2>
-                    <p data-i18n="service2_desc">Our customized logistical solutions are designed to optimize your supply chain and meet the unique needs of your business. From route planning to inventory management, we provide end-to-end support to ensure seamless operations.</p>
-                    <ul>
-                    <li data-i18n="service2_feature1">Supply chain optimization</li>
-                    <li data-i18n="service2_feature2">Route planning and scheduling</li>
-                    <li data-i18n="service2_feature3">Inventory management</li>
-                    <li data-i18n="service2_feature4">Custom logistics consulting</li>
+                <div class="service-text-box">
+                    <h2>نقل المحروقات</h2>
+                    <p>نتخصص في النقل الآمن والكفء لجميع أنواع المحروقات والمشتقات النفطية، بما في ذلك الديزل والبنزين والمنتجات المكررة الأخرى. أسطولنا الحديث مجهز بأحدث ميزات السلامة وأنظمة تتبع GPS لضمان المراقبة الفورية والتسليم الآمن.</p>
+                    <ul class="modern-pill-list">
+                        <li><i class="fas fa-check"></i>خدمة على مدار 24 ساعة</li>
+                        <li><i class="fas fa-check"></i>شاحنات صهاريج متطورة</li>
+                        <li><i class="fas fa-check"></i>معايير السلامة الدولية</li>
+                        <li><i class="fas fa-check"></i>تتبع فوري في الوقت الحقيقي</li>
+                        <li><i class="fas fa-check"></i>تقارير تفصيلية</li>
                     </ul>
-                    </div>
-                </div>
-                <div class="service-detail">    
-                    <div class="service-image">
-                        <img src="../images/transport_managmetn.png" alt="Transport Operations Management" data-i18n-alt="alt_service_management">
-                    </div>
-                    <div class="service-content">
-                    <h2><i class="fas fa-arrow-right"></i> <span data-i18n="service3_title">Transport Operations Management</span></h2>
-                    <p data-i18n="service3_desc">We handle all aspects of transport operations management, adhering to strict safety regulations and industrial standards. Our experienced team ensures that every operation is conducted with the highest level of professionalism and efficiency.</p>
-                    <ul>
-                    <li data-i18n="service3_feature1">Safety compliance management</li>
-                    <li data-i18n="service3_feature2">Fleet maintenance and monitoring</li>
-                    <li data-i18n="service3_feature3">Driver training and certification</li>
-                    <li data-i18n="service3_feature4">Regulatory compliance support</li>
-                    </ul>
-                    </div>
                 </div>
             </div>
+
+            <!-- Service 2: Logistics -->
+            <div class="service-split-row">
+                <div class="service-img-box">
+                    <img src="../images/logistic.png" alt="حلول لوجستية" onerror="this.src='../images/orange_truck.png'">
+                    <div class="service-icon-float"><i class="fas fa-boxes"></i></div>
+                </div>
+                <div class="service-text-box">
+                    <h2>الحلول اللوجستية</h2>
+                    <p>حلولنا اللوجستية المخصصة مصممة لتحسين سلسلة التوريد وتلبية الاحتياجات الفريدة لعملك. من تخطيط الطرق إلى إدارة المخزون، نوفر دعماً شاملاً من البداية إلى النهاية لضمان سلاسة العمليات.</p>
+                    <ul class="modern-pill-list">
+                        <li><i class="fas fa-check"></i>تحسين سلسلة التوريد</li>
+                        <li><i class="fas fa-check"></i>تخطيط الطرق والجداول</li>
+                        <li><i class="fas fa-check"></i>إدارة المخزون</li>
+                        <li><i class="fas fa-check"></i>استشارات لوجستية مخصصة</li>
+                        <li><i class="fas fa-check"></i>تقليل التكاليف التشغيلية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3: Operations Management -->
+            <div class="service-split-row">
+                <div class="service-img-box">
+                    <img src="../images/transport_managmetn.png" alt="إدارة عمليات النقل" onerror="this.src='../images/white_truck.png'">
+                    <div class="service-icon-float"><i class="fas fa-cogs"></i></div>
+                </div>
+                <div class="service-text-box">
+                    <h2>إدارة عمليات النقل</h2>
+                    <p>نتولى جميع جوانب إدارة عمليات النقل مع الالتزام بأنظمة السلامة الصارمة والمعايير الصناعية. فريقنا ذو الخبرة يضمن تنفيذ كل عملية بأعلى مستوى من الاحترافية والكفاءة.</p>
+                    <ul class="modern-pill-list">
+                        <li><i class="fas fa-check"></i>إدارة الامتثال للسلامة</li>
+                        <li><i class="fas fa-check"></i>صيانة ومراقبة الأسطول</li>
+                        <li><i class="fas fa-check"></i>تدريب وتأهيل السائقين</li>
+                        <li><i class="fas fa-check"></i>دعم الامتثال التنظيمي</li>
+                        <li><i class="fas fa-check"></i>تقارير أداء شاملة</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section style="background: linear-gradient(135deg, #23312c 0%, #0a1f18 100%); padding: 80px 0; text-align: center; direction: rtl;">
+        <div class="container">
+            <h2 style="color: #fff; font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">هل تحتاج إلى خدماتنا؟</h2>
+            <p style="color: #aaa; font-size: 1.2rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">تواصل معنا اليوم للحصول على استشارة مجانية وعرض سعر مخصص لاحتياجاتك</p>
+            <a href="contact.html" style="background: #e31e24; color: #fff; padding: 18px 50px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 1.2rem; display: inline-block; transition: 0.3s;" onmouseover="this.style.background='#fff'; this.style.color='#e31e24';" onmouseout="this.style.background='#e31e24'; this.style.color='#fff';">تواصل معنا الآن</a>
         </div>
     </section>
 
     <footer id="shared-footer"></footer>
-
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
-
     <script src="../script.js"></script>
 </body>
 </html>

@@ -1,83 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Tahaluf Alemtiaz Company Limited</title>
+    <title>اتصل بنا - شركة تحالف الامتياز</title>
+    <meta name="description" content="تواصل مع شركة تحالف الامتياز للحصول على أفضل خدمات نقل المحروقات والبضائع في المملكة العربية السعودية.">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="../shared.js"></script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; margin: 0; background: #f8f8f8; }
+        .modern-form-group textarea { min-height: 140px; resize: vertical; }
+    </style>
 </head>
 <body>
-    <div id="preloader">
-    <div class="spinner"></div>
-    </div>
     <header id="shared-header"></header>
 
-    <section class="contact-full">
+    <!-- Hero Banner -->
+    <section class="subpage-hero">
+        <img class="subpage-hero-bg" src="../images/hero_modern.png" alt="Contact Hero">
+        <div class="subpage-hero-overlay"></div>
+        <div class="subpage-hero-content container">
+            <h1 class="subpage-hero-title">تواصل معنا</h1>
+            <p class="subpage-hero-subtitle">نحن هنا للمساعدة في جميع احتياجاتك المتعلقة بنقل المحروقات والبضائع - تواصل معنا الآن</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="premium-contact-container">
         <div class="container">
-            <h1 data-i18n="contact">Contact Us</h1>
-            <p data-i18n="contact_intro">Get in touch with us for all your petroleum derivatives transportation needs. We're here to help!</p>
-            <div class="contact-content">
-            <div class="contact-form-section">
-            <h2 data-i18n="send_message">Send us a Message</h2>
-                    <form class="contact-form" action="https://formspree.io/f/xzzyzzry" method="POST">
-                        <div class="form-group">
-                            <label for="name" data-i18n="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-i18n="email_label">Email</label>
-                            <input type="email" id="email" name="email" required>
+            <div class="contact-split-layout">
+
+                <!-- Left: Contact Form -->
+                <div class="contact-form-side">
+                    <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 10px; color: #111;">أرسل لنا رسالة</h2>
+                    <p style="color: #888; margin-bottom: 35px; font-size: 1rem;">سنرد عليك خلال 24 ساعة في أيام العمل</p>
+
+                    <form action="https://formspree.io/f/xzzyzzry" method="POST">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="modern-form-group">
+                                <label for="name">الاسم الكامل</label>
+                                <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
                             </div>
-                            <div class="form-group">
-                            <label for="phone" data-i18n="phone_label">Phone</label>
-                            <input type="tel" id="phone" name="phone">
+                            <div class="modern-form-group">
+                                <label for="phone">رقم الجوال</label>
+                                <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" dir="ltr">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="subject" data-i18n="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
+                        <div class="modern-form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" dir="ltr" required>
                         </div>
-                        <div class="form-group">
-                            <label for="message" data-i18n="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
+                        <div class="modern-form-group">
+                            <label for="subject">موضوع الرسالة</label>
+                            <input type="text" id="subject" name="subject" placeholder="موضوع استفسارك أو طلبك" required>
                         </div>
-                        <button type="submit" class="cta-button" data-i18n="send_message_btn">Send Message</button>
-                        </form>
+                        <div class="modern-form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" placeholder="اكتب رسالتك بالتفصيل..." required></textarea>
                         </div>
-                        <div class="contact-info-section">
-                        <h2 data-i18n="get_in_touch">Get in Touch</h2>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <h3><i class="fas fa-map-marker-alt"></i><span data-i18n="address">Address</span></h3>
-                            <p>تبوك, حي كريم, أبي القاسم الزهيري, 47916</p>
+                        <button type="submit" class="modern-submit-btn">
+                            <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Info & Map -->
+                <div class="contact-info-side">
+                    
+                    <!-- Floating Info Card -->
+                    <div class="info-floating-card">
+                        <h3><i class="fas fa-info-circle" style="color: #e31e24; margin-left: 12px;"></i>معلومات التواصل</h3>
+                        
+                        <div class="info-floating-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>العنوان</h4>
+                                <p>تبوك، حي كريم، أبي القاسم الزهيري، 47916</p>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <h3><i class="fas fa-phone"></i><span data-i18n="phone">Phone</span></h3>
-                            <p dir="ltr">+966 55 839 1838</p>
+
+                        <div class="info-floating-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>الجوال</h4>
+                                <p dir="ltr">+966 55 839 1838</p>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <h3><i class="fas fa-envelope"></i><span data-i18n="email">Email</span></h3>
-                            <p dir="ltr">info@allianceofemtiaz.com</p>
+
+                        <div class="info-floating-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>البريد الإلكتروني</h4>
+                                <p dir="ltr">info@allianceofemtiaz.com</p>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                             <h3><i class="fas fa-clock"></i><span data-i18n="business_hours">Business Hours</span></h3>
-                             <p class="hours" data-i18n="hours" dir="ltr">24 Hours, 7 Days a Week</p>
-                         </div>
+
+                        <div class="info-floating-item" style="margin-bottom: 0;">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>ساعات العمل</h4>
+                                <p>على مدار الساعة 7 أيام/أسبوع</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="map-placeholder">
-                        <img src="../images/map.jpg" alt="Location Map" data-i18n-alt="alt_location_map">
+
+                    <!-- Map -->
+                    <div class="premium-map-box">
+                        <iframe
+                            src="https://maps.google.com/maps?q=تبوك،+المملكة+العربية+السعودية&output=embed"
+                            width="100%" height="100%" frameborder="0"
+                            style="border:0; display:block;" allowfullscreen="">
+                        </iframe>
+                    </div>
+
+                    <!-- Social Media Quick Links -->
+                    <div style="background: #fff; border-radius: 15px; padding: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center;">
+                        <p style="font-weight: 700; color: #333; margin-bottom: 20px; font-size: 1.1rem;">تابعنا على وسائل التواصل</p>
+                        <div style="display: flex; justify-content: center; gap: 15px;">
+                            <a href="#" style="background: #25D366; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; text-decoration: none; transition: 0.3s;" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" style="background: #1da1f2; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; text-decoration: none; transition: 0.3s;" title="تويتر"><i class="fab fa-twitter"></i></a>
+                            <a href="#" style="background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; text-decoration: none; transition: 0.3s;" title="انستغرام"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="background: #0077b5; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; text-decoration: none; transition: 0.3s;" title="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/966558391838" target="_blank" style="position: fixed; bottom: 90px; left: 25px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); z-index: 1000; transition: 0.3s;" title="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <footer id="shared-footer"></footer>
-
     <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
-
     <script src="../script.js"></script>
 </body>
 </html>

@@ -388,17 +388,97 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for fade-in animations
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.1 });
+// Initialize interactive animation libraries
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Initialize Lenis Smooth Scroll
+    if (typeof Lenis !== 'undefined') {
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
 
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+        
+        // Connect Lenis to GSAP ScrollTrigger
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => {
+              lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        }
+    }
+
+    // 2. GSAP Animations
+    if (typeof gsap !== 'undefined') {
+        // Hero Sequence
+        const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
+        tl.to('.gsap-reveal', { opacity: 1, y: 0, delay: 0.2 })
+          .to('.gsap-reveal-sub', { opacity: 1, y: 0 }, "-=0.7")
+          .to('.gsap-reveal-btn', { opacity: 1, y: 0 }, "-=0.7");
+          
+        // Overlapping Cards Animation
+        gsap.from('.overlap-card', {
+            scrollTrigger: {
+                trigger: '.overlapping-cards-wrapper',
+                start: "top 85%",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "power2.out"
+        });
+
+        // Highly Professional Advanced Staggered Section Reveals
+        const sections = gsap.utils.toArray('section:not(.hero)');
+        sections.forEach((sec) => {
+            // Auto-detect components to stagger sequentially
+            const elementsToStagger = sec.querySelectorAll('.section-title, .h-why__title, .h-focus__title, .h-why__subtitle, .why-card, .svc-card, .project-card, .client-logo, .stat-item, .contact-card, .h-why__image, .h-focus__image, .faq-item');
+            
+            if (elementsToStagger.length > 0) {
+                // If the section uses modern component architecture, cascade the components
+                gsap.from(elementsToStagger, {
+                    scrollTrigger: {
+                        trigger: sec,
+                        start: "top 85%", // Reveal slightly earlier for smoother experience
+                        toggleActions: "play none none none" // Play once seamlessly
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.9,
+                    stagger: 0.12, // The critical professional waterfall delay
+                    ease: "power3.out"
+                });
+            } else {
+                // Fallback for simpler sections: stagger their direct children instead of the entire block
+                gsap.from(sec.children, {
+                    scrollTrigger: {
+                        trigger: sec,
+                        start: "top 85%",
+                    },
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power2.out"
+                });
+            }
+        });
+    }
 });
 
 // Language selector
@@ -451,26 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('cards-only');
     }
 
-    // Reveal cards with IntersectionObserver (staggered)
-    (function revealCards() {
-        const selector = '.stat-item, .feature-item, .service-card, .project-card';
-        const cards = Array.from(document.querySelectorAll(selector));
-        if (!cards.length) return;
-
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const idx = cards.indexOf(el);
-                    const delay = Math.min(12, Math.max(0, idx)) * 80; // stagger
-                    setTimeout(() => el.classList.add('reveal'), delay);
-                    obs.unobserve(el);
-                }
-            });
-        }, { threshold: 0.18 });
-
-        cards.forEach(c => observer.observe(c));
-    })();
+    // Removed redundant IntersectionObserver .reveal logic because GSAP provides superior high-end staggered animations now.
 
     // Simple form handling for contact and quote forms
 
@@ -650,3 +711,16 @@ function clearFormFields() {
         }
     }
     });
+
+    // FAQ Toggle functionality
+    function toggleFaq(element) {
+        const item = element.parentElement;
+        // Optionally close other items
+        const siblings = item.parentElement.children;
+        for(let sibling of siblings) {
+            if(sibling !== item && sibling.classList.contains('active')) {
+                sibling.classList.remove('active');
+            }
+        }
+        item.classList.toggle('active');
+    }

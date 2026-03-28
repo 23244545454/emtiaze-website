@@ -1,368 +1,513 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tahaluf Alemtiaz Company Limited - Petroleum Derivatives Transportation in Saudi Arabia</title>
-    <meta name="description" content="Leading provider of safe and efficient petroleum derivatives transportation services in Saudi Arabia. Modern fleet, 24/7 support, expert logistics.">
-    <meta name="keywords" content="petroleum transportation, fuel delivery, Saudi Arabia, logistics, tanker trucks, diesel, gasoline">
-    <meta name="author" content="Tahaluf Alemtiaz Company Limited">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://23244545454.github.io/emtiaze-website/">
+    <title>شركة تحالف الامتياز - نقل المحروقات باحترافية</title>
+    <meta name="description" content="شركة تحالف الامتياز المحدودة - الرائدة في نقل المحروقات والبضائع بأعلى معايير السلامة في المملكة العربية السعودية">
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
     <script src="shared.js"></script>
 </head>
-<body>
-    <div id="preloader">
-        <div class="spinner">
-            <div class="dot"></div>
-        </div>
-        <div class="preloader-text">Loading</div>
-    </div>
+<body class="home-page">
     <header id="shared-header"></header>
 
-    <section id="home" class="hero">
-    <picture class="hero-media" aria-hidden="true">
-        <img src="images/background.jpeg" alt="Hero Background" loading="lazy" decoding="async">
-    </picture>
-    <div class="hero-background">
-    <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
+    <!-- ══════════════ HERO SLIDER ══════════════ -->
+    <section class="hs" id="hero">
+        <div class="hs__slides">
+            <div class="hs__slide active" data-svc-icon="fa-gas-pump" data-svc-tag="نقل المحروقات" data-svc-title="نقل المحروقات بأمان واحترافية" data-svc-desc="نقل آمن وكفء لجميع أنواع المشتقات النفطية والوقود عبر أسطولنا المتطور المجهز بأحدث تقنيات السلامة وأنظمة المراقبة الفورية.">
+                <div class="hs__slide-bg" style="background-image:url('images/hero_modern.png')"></div>
+                <div class="hs__slide-overlay"></div>
+            </div>
+            <div class="hs__slide" data-svc-icon="fa-boxes" data-svc-tag="الحلول اللوجستية" data-svc-title="حلول لوجستية متكاملة" data-svc-desc="ندير سلسلة التوريد بالكامل من التخطيط والتخزين إلى التوزيع والتسليم النهائي، مع أقل تكلفة وأعلى كفاءة.">
+                <div class="hs__slide-bg" style="background-image:url('images/blue_tanker.png')"></div>
+                <div class="hs__slide-overlay"></div>
+            </div>
+            <div class="hs__slide" data-svc-icon="fa-truck-moving" data-svc-tag="توريد النفط ومشتقاته" data-svc-title="توريد النفط ومشتقاته" data-svc-desc="نوفر حلولاً متكاملة لتوريد النفط الخام ومنتجاته بأعلى معايير الجودة الدولية والتزام تام بمتطلبات الأمان والسلامة البيئية.">
+                <div class="hs__slide-bg" style="background-image:url('images/orange_truck.png')"></div>
+                <div class="hs__slide-overlay"></div>
+            </div>
+            <div class="hs__slide" data-svc-icon="fa-cogs" data-svc-tag="إدارة عمليات النقل" data-svc-title="إدارة عمليات النقل" data-svc-desc="فريق متخصص يدير كافة عمليات النقل بكفاءة عالية مع الالتزام الكامل بالأنظمة والمعايير المحلية والدولية المعتمدة.">
+                <div class="hs__slide-bg" style="background-image:url('images/white_truck.png')"></div>
+                <div class="hs__slide-overlay"></div>
             </div>
         </div>
-        <div class="hero-content">
-            <h1 data-i18n="hero_title" class="typing-effect">Pioneers in Petroleum Derivatives Transportation</h1>
-             <p data-i18n="hero_subtitle">Providing safe and efficient transportation solutions across the Kingdom.</p>
-             <button onclick="openQuoteModal()" class="cta-button" data-i18n="request_quote">Request a Quote</button>
+        <div class="hs__noise"></div>
+        <div class="hs__grid-lines"></div>
+
+        <div class="hs__content container">
+            <div class="hs__eyebrow">
+                <span class="dot-pulse"></span>
+                <span id="hs-svc-tag">نقل المحروقات</span>
             </div>
-                <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
+            <h1 class="hs__title">
+                <span class="hs__title-line">شركة تحالف الامتياز</span>
+                <span class="hs__title-line hs__title-service gradient-text" id="hs-svc-title">نقل المحروقات بأمان واحترافية</span>
+            </h1>
+            <p class="hs__sub" id="hs-svc-desc">نقل آمن وكفء لجميع أنواع المشتقات النفطية والوقود عبر أسطولنا المتطور المجهز بأحدث تقنيات السلامة وأنظمة المراقبة الفورية.</p>
+            <div class="hs__actions">
+                <a href="pages/contact.html" class="btn-primary-glow"><i class="fas fa-phone-alt"></i> تواصل معنا الآن</a>
+                <a href="pages/services.html" class="btn-glass"><i class="fas fa-arrow-left"></i> استعراض خدماتنا</a>
             </div>
-            <div class="arrow"></div>
         </div>
+
+        <div class="hs__svc-badge"><i class="fas fa-gas-pump" id="hs-svc-icon"></i></div>
+
+        <div class="hs__nav">
+            <div class="hs__counter"><span id="hs-curr">01</span><span class="hs__counter-sep">/</span><span class="hs__counter-total">04</span></div>
+            <div class="hs__dots">
+                <button class="hs__dot active" onclick="hsGoto(0)"></button>
+                <button class="hs__dot" onclick="hsGoto(1)"></button>
+                <button class="hs__dot" onclick="hsGoto(2)"></button>
+                <button class="hs__dot" onclick="hsGoto(3)"></button>
+            </div>
+            <div class="hs__progress"><div class="hs__progress-bar" id="hs-progress"></div></div>
+        </div>
+        <button class="hs__arrow hs__arrow--prev" onclick="hsPrev()"><i class="fas fa-chevron-right"></i></button>
+        <button class="hs__arrow hs__arrow--next" onclick="hsNext()"><i class="fas fa-chevron-left"></i></button>
+
+        <div class="h-hero__stats">
+            <div class="h-stat"><span class="h-stat__n" data-count="100">0</span><span class="h-stat__n-suffix">+</span><div class="h-stat__l">مشروع منجز</div></div>
+            <div class="h-stat"><span class="h-stat__n" data-count="240">0</span><span class="h-stat__n-suffix">+</span><div class="h-stat__l">عميل راضٍ</div></div>
+            <div class="h-stat"><span class="h-stat__n" data-count="350">0</span><span class="h-stat__n-suffix">+</span><div class="h-stat__l">صفقة ناجحة</div></div>
+            <div class="h-stat"><span class="h-stat__n">24</span><span class="h-stat__n-suffix">/7</span><div class="h-stat__l">خدمة متواصلة</div></div>
+        </div>
+        <div class="h-hero__scroll-hint"><div class="scroll-wheel"></div><span>اسحب للأسفل</span></div>
     </section>
 
-    <section class="stats">
-    <div class="container">
-    <div class="stats-grid">
-    <div class="stat-item">
-    <h3 class="counter" data-target="10" dir="ltr">0</h3>
-    <p data-i18n="years_experience">Years of Experience</p>
-    </div>
-    <div class="stat-item">
-    <h3 class="counter" data-target="500" dir="ltr">0</h3>
-    <p data-i18n="projects_completed">Projects Completed</p>
-    </div>
-    <div class="stat-item">
-    <h3 class="counter" data-target="100" dir="ltr">0</h3>
-    <p data-i18n="client_satisfaction">Client Satisfaction (%)</p>
-    </div>
-    <div class="stat-item">
-    <h3 class="counter" data-target="24" dir="ltr">0</h3>
-    <p data-i18n="support_hours">/7 Support</p>
-    </div>
-    </div>
-    </div>
-    </section>
-
-    <section class="features">
+    <!-- ══════════════ BENTO GRID ══════════════ -->
+    <section class="h-bento" id="bento">
         <div class="container">
-            <h2 data-i18n="why_choose_us">Why Choose Us?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">  
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 data-i18n="feature1_title">Safety First</h3>
-                    <p data-i18n="feature1_desc">Our top priority is safety, with rigorous protocols and modern equipment ensuring secure operations.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 data-i18n="feature2_title">24/7 Support</h3>
-                    <p data-i18n="feature2_desc">Round-the-clock customer support and emergency response for uninterrupted service.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3 data-i18n="feature3_title">Modern Fleet</h3>
-                    <p data-i18n="feature3_desc">State-of-the-art tanker trucks equipped with GPS tracking and advanced safety features.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 data-i18n="feature4_title">Trusted Partnership</h3>
-                    <p data-i18n="feature4_desc">Building long-term relationships with clients through reliability and exceptional service.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="h-bento__grid">
 
-    <section class="process">
-        <div class="container">
-            <h2 data-i18n="our_process">Our Process</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-search"></i>
+                <!-- LEFT: Large main identity card -->
+                <div class="b-card b-card--main" data-reveal>
+                    <img src="images/red_truck.png" alt="تحالف الامتياز" class="b-card__img" onerror="this.src='images/hero_modern.png'">
+                    <div class="b-card__overlay"></div>
+                    <div class="b-card__top">
+                        <p class="b-brand-sub">شركة</p>
+                        <h2 class="b-brand-name">تحالف الامتياز</h2>
+                        <p class="b-brand-desc">نقل المحروقات والبضائع باحترافية وأمان</p>
                     </div>
-                    <h3 data-i18n="step1_title">Inquiry</h3>
-                    <p data-i18n="step1_desc">Submit your transportation requirements through our quote form.</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-comments"></i>
+                    <div class="b-mid-badge">نصل إليك بثقة وسرعة</div>
+                    <div class="b-card__footer">
+                        <div class="b-footer-left">
+                            <div class="b-url"><a href="https://allianceofemtiaz.com">www.allianceofemtiaz.com</a></div>
+                            <div class="b-loc"><i class="fas fa-map-marker-alt"></i> الرياض، حي السويدي</div>
+                        </div>
+                        <button class="b-cta" onclick="location.href='pages/services.html'">اكتشف المزيد</button>
                     </div>
-                    <h3 data-i18n="step2_title">Consultation</h3>
-                    <p data-i18n="step2_desc">Our experts analyze your needs and provide tailored solutions.</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3 data-i18n="step3_title">Quote</h3>
-                    <p data-i18n="step3_desc">Receive a competitive, transparent quote for your project.</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3 data-i18n="step4_title">Execution</h3>
-                    <p data-i18n="step4_desc">We handle logistics, scheduling, and safe transportation.</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3 data-i18n="step5_title">Delivery</h3>
-                    <p data-i18n="step5_desc">On-time delivery with full tracking and customer support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2 data-i18n="about_us">About Us</h2>
-            <div class="about-content">
-                <div class="logo-section">
-                    <img src="images/logo.png" alt="Emtiaze Company Logo">
-                </div>
-                <div class="text-section">
-                    <p data-i18n="about_text">Emtiaze Company is a leading provider of transportation services for petroleum derivatives within the Kingdom. We are committed to delivering high-quality, safe, and reliable transportation solutions that meet the highest standards of efficiency and customer satisfaction.</p>
-                    <a href="pages/about.html" class="read-more" data-i18n="read_more">Read More</a>
-                    </div>
-                    </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-        <h2 data-i18n="our_services">Our Services</h2>
-        <div class="services-grid">
-                <div class="service-card">
-                    <img src="images/transportation.png" alt="Service Icon">
-                    <h3 data-i18n="service1_title">Petroleum Derivatives Transportation</h3>
-                    <p data-i18n="service1_desc">We specialize in the safe and efficient transportation of all types of petroleum derivatives across the Kingdom, ensuring timely delivery with modern fleet and expert team.</p>
-                    </div>
-                    <div class="service-card">
-                    <img src="images/logistic.png" alt="Service Icon">
-                    <h3 data-i18n="service2_title">Logistical Solutions</h3>
-                    <p data-i18n="service2_desc">Customized logistical solutions tailored to meet the unique needs of our clients, optimizing supply chains and ensuring seamless operations.</p>
-                    </div>
-                    <div class="service-card">
-                    <img src="images/transportmanagment.png" alt="Service Icon">
-                    <h3 data-i18n="service3_title">Transport Operations Management</h3>
-                    <p data-i18n="service3_desc">Comprehensive management of transport operations, adhering to safety standards and industrial regulations for maximum efficiency and compliance.</p>
-                </div>
-                </div>
-                     <a href="pages/services.html" class="view-all" data-i18n="view_all_services">View All Services</a>
-                    </div>
-    </section>
-
-    <section id="projects" class="projects">
-    <div class="container">
-            <h2 data-i18n="our_projects">Our Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-            <img src="images/reyadh_season.png" alt="Riyadh Season">
-            <h3 data-i18n="project1_title">Riyadh Season Fuel Supply</h3>
-            <p data-i18n="project1_desc">Ensuring uninterrupted fuel supply for the major events of Riyadh Season, powering the festivities with reliable transportation.</p>
-            <a href="pages/projects.html" class="read-more" data-i18n="read_more">Read More</a>
-            </div>
-            <div class="project-card">
-            <img src="images/formel.png" alt="Formula 1 Jeddah">
-            <h3 data-i18n="project2_title">Formula 1 Jeddah Fuel Supply</h3>
-            <p data-i18n="project2_desc">Delivering fuel for the global Formula 1 event in Jeddah, supporting the high-octane action with precision and safety.</p>
-            <a href="pages/projects.html" class="read-more" data-i18n="read_more">Read More</a>
-                </div>
-                <div class="project-card">
-            <img src="images/form.png" alt="The Line Project">
-            <h3 data-i18n="project3_title">The Line Project Fuel Delivery</h3>
-            <p data-i18n="project3_desc">Regular fuel deliveries to the sites of The Line project, fueling the future of urban development.</p>
-            <a href="pages/projects.html" class="read-more" data-i18n="read_more">Read More</a>
-            </div>
-            <div class="project-card">
-            <img src="images/nationlaevents.png" alt="National Events">
-            <h3 data-i18n="project4_title">National Events Support</h3>
-            <p data-i18n="project4_desc">Providing fuel transportation for various national events, contributing to the energy needs of the Kingdom's celebrations.</p>
-            <a href="pages/projects.html" class="read-more" data-i18n="read_more">Read More</a>
-                </div>
-            </div>
-            <a href="pages/projects.html" class="view-all" data-i18n="view_all_projects">View All Projects</a>
-        </div>
-    </section>
-
-    <section class="partners">
-    <div class="container">
-    <h2 data-i18n="our_clients">Our Clients</h2>
-    <div class="clients-list" style="margin-bottom: var(--spacing-xl);">
-                <div class="client-item">
-                    <svg viewBox="0 0 120 120" class="client-logo">
-                        <circle cx="60" cy="60" r="50" fill="#FFD700"/>
-                        <circle cx="60" cy="60" r="35" fill="none" stroke="#1e3a8a" stroke-width="3"/>
-                        <circle cx="60" cy="20" r="8" fill="#1e3a8a"/>
-                        <circle cx="60" cy="100" r="8" fill="#1e3a8a"/>
-                        <circle cx="20" cy="60" r="8" fill="#1e3a8a"/>
-                        <circle cx="100" cy="60" r="8" fill="#1e3a8a"/>
-                    </svg>
-                    <div>شركة نور يوم المحدودة</div>
-                </div>
-                <div class="client-item">
-                    <svg viewBox="0 0 120 120" class="client-logo">
-                        <rect x="10" y="10" width="100" height="100" rx="15" fill="#1e3a8a" stroke="#FFD700" stroke-width="2"/>
-                        <text x="60" y="70" font-size="48" font-weight="bold" fill="#FFD700" text-anchor="middle" font-family="Arial">WJ</text>
-                    </svg>
-                    <div>شركة دبليو جيه السعودية المحدودة</div>
-                </div>
-                <div class="client-item">
-                    <svg viewBox="0 0 120 120" class="client-logo">
-                        <circle cx="60" cy="60" r="45" fill="none" stroke="#FFD700" stroke-width="2"/>
-                        <circle cx="60" cy="60" r="30" fill="#1e3a8a"/>
-                        <circle cx="60" cy="35" r="6" fill="#FFD700"/>
-                        <circle cx="85" cy="60" r="6" fill="#FFD700"/>
-                        <circle cx="60" cy="85" r="6" fill="#FFD700"/>
-                        <circle cx="35" cy="60" r="6" fill="#FFD700"/>
-                    </svg>
-                    <div>شركة الحلول الصائبة للمقاولات العامة</div>
-                </div>
-    </div>
-        <a href="pages/clients.html" class="view-all" data-i18n="view_all_clients">View All Clients</a>
-        </div>
-    </section>
-
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-wrapper">
-                <div class="newsletter-header">
-                    <div class="newsletter-badge" data-i18n="newsletter_badge">Latest News & Updates</div>
-                    <h2 data-i18n="stay_updated">Stay Updated with Industry Insights</h2>
-                    <p data-i18n="newsletter_desc">Subscribe to our newsletter for the latest updates on petroleum derivatives transportation and industry trends.</p>
                 </div>
 
-                <div class="newsletter-content">
-                    <div class="newsletter-benefits">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-bell"></i>
+                <!-- RIGHT COLUMN -->
+                <div class="b-right-col">
+
+                    <!-- Top: Fuel transport - wide card -->
+                    <div class="b-card b-card--wide" data-reveal data-delay="1">
+                        <img src="images/blue_tanker.png" alt="" class="b-card__img" onerror="this.src='images/hero_modern.png'">
+                        <div class="b-card__overlay"></div>
+                        <div class="b-card__sm-icon"><i class="fas fa-gas-pump"></i></div>
+                        <div class="b-card__sm-body">
+                            <h3>نقل المحروقات</h3>
+                            <p>تشمل خدمات نقل النفط ومشتقاته، مع توفير حلول متخصصة تلبي احتياجات العملاء</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom row: 2 cards side by side -->
+                    <div class="b-bottom-row">
+                        <div class="b-card b-card--sm" data-reveal data-delay="2">
+                            <img src="images/orange_truck.png" alt="" class="b-card__img" onerror="this.src='images/hero_modern.png'">
+                            <div class="b-card__overlay"></div>
+                            <div class="b-card__sm-icon"><i class="fas fa-boxes"></i></div>
+                            <div class="b-card__sm-body">
+                                <h3>الخدمات اللوجستية</h3>
+                                <p>تقدم الشركة حلولاً متكاملة للتخزين، التوزيع، وإدارة سلاسل الإمداد</p>
                             </div>
-                            <p data-i18n="newsletter_benefit1">Real-time updates</p>
                         </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-envelope"></i>
+                        <div class="b-card b-card--sm" data-reveal data-delay="3">
+                            <img src="images/white_truck.png" alt="" class="b-card__img" onerror="this.src='images/hero_modern.png'">
+                            <div class="b-card__overlay"></div>
+                            <div class="b-card__sm-icon"><i class="fas fa-truck-moving"></i></div>
+                            <div class="b-card__sm-body">
+                                <h3>توريد النفط ومشتقاته</h3>
+                                <p>يوفّر الشركة حلولاً متكاملة بأعلى معايير الجودة والالتزام باشتراطات السلامة</p>
                             </div>
-                            <p data-i18n="newsletter_benefit2">Weekly digest</p>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <p data-i18n="newsletter_benefit3">Industry insights</p>
                         </div>
                     </div>
 
-                    <form class="newsletter-form-modern" action="https://formspree.io/f/xldaddbp" method="POST">
-                        <div class="form-input-wrapper">
-                            <input 
-                                type="email" 
-                                name="email" 
-                                placeholder="Enter your email address" 
-                                data-i18n-placeholder="email_placeholder" 
-                                required>
-                            <button type="submit" class="newsletter-btn" data-i18n="subscribe">
-                                <span data-i18n="subscribe">Subscribe</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
+                </div><!-- /b-right-col -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══════════════ SERVICES ══════════════ -->
+    <section class="h-services" id="services">
+        <div class="container">
+            <div class="svc-hdr" data-reveal>
+                <div>
+                    <div class="section-label" style="justify-content:flex-start;"><span class="section-label__line"></span>خدماتنا</div>
+                    <h2 class="section-title" style="text-align:right;">ماذا نقدم <span style="color:var(--red);">لعملائنا</span></h2>
+                </div>
+                <p class="section-sub" style="text-align:right;margin:0;max-width:380px;">مجموعة متكاملة من خدمات النقل واللوجستيات لقطاع المحروقات في المملكة والمنطقة</p>
+            </div>
+            <div class="h-services__grid">
+                <div class="svc-card" data-reveal>
+                    <div class="svc-card__img-wrap"><img src="images/transportation.png" alt="" onerror="this.src='images/red_truck.png'"></div>
+                    <div class="svc-card__body">
+                        <div class="svc-card__icon"><i class="fas fa-gas-pump"></i></div>
+                        <h3>نقل المحروقات</h3>
+                        <p>نقل آمن وكفء لجميع أنواع المشتقات النفطية مع تتبع فوري وأعلى معايير السلامة الدولية.</p>
+                        <a href="pages/services.html" class="svc-card__btn">اكتشف المزيد</a>
+                    </div>
+                </div>
+                <div class="svc-card" data-reveal data-delay="1">
+                    <div class="svc-card__img-wrap"><img src="images/logistic.png" alt="" onerror="this.src='images/orange_truck.png'"></div>
+                    <div class="svc-card__body">
+                        <div class="svc-card__icon"><i class="fas fa-boxes"></i></div>
+                        <h3>الحلول اللوجستية</h3>
+                        <p>تحسين سلسلة التوريد من تخطيط الطرق وإدارة المخزون حتى التسليم الأخير بكفاءة عالية.</p>
+                        <a href="pages/services.html" class="svc-card__btn">اكتشف المزيد</a>
+                    </div>
+                </div>
+                <div class="svc-card" data-reveal data-delay="2">
+                    <div class="svc-card__img-wrap"><img src="images/transport_managmetn.png" alt="" onerror="this.src='images/white_truck.png'"></div>
+                    <div class="svc-card__body">
+                        <div class="svc-card__icon"><i class="fas fa-cogs"></i></div>
+                        <h3>إدارة عمليات النقل</h3>
+                        <p>إدارة شاملة لعمليات النقل مع الالتزام الصارم بالأنظمة والمعايير الدولية والمحلية.</p>
+                        <a href="pages/services.html" class="svc-card__btn">اكتشف المزيد</a>
+                    </div>
+                </div>
+            </div>
+            <div class="svc-cta-row" data-reveal>
+                <a href="pages/services.html" class="btn-outline-dark">عرض جميع الخدمات <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ WHY US ══════════════ -->
+    <section class="h-why" id="why-us">
+        <div class="container h-why__inner" data-reveal>
+            <!-- RIGHT in RTL: Text and Grid -->
+            <div class="h-why__content">
+                <h2 class="h-why__title">مايميّزنا</h2>
+                <p class="h-why__subtitle">شريكك الموثوق في تقديم أذكى الحلول اللوجستية المتكاملة بمعايير عالمية.</p>
+                
+                <div class="why-grid">
+                    <!-- Cards -->
+                    <div class="why-card">
+                        <div class="why-card__icon"><i class="fas fa-award"></i></div>
+                        <h4>الخبرة</h4>
+                        <p>تتمتع الشركة بفريق عمل محترف يمتلك خبرة واسعة في مجال النقل واللوجستيات.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card__icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>الأمان</h4>
+                        <p>تضع الشركة سلامة الشحنات والموظفين كأولوية قصوى، مع الالتزام بمعايير السلامة العالمية.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card__icon"><i class="fas fa-satellite-dish"></i></div>
+                        <h4>التكنولوجيا</h4>
+                        <p>تعتمد الشركة على تقنيات حديثة في إدارة النقل لتعزيز الكفاءة وتحسين تجربة العملاء.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card__icon"><i class="fas fa-clock"></i></div>
+                        <h4>الالتزام</h4>
+                        <p>سجل موثق بتسليم 100% من الشحنات في الوقت المحدد دون أي تأخير.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- LEFT in RTL: Standalone Premium Image -->
+            <div class="h-why__image" data-reveal data-delay="1">
+                <img src="images/hero_modern.png" alt="لماذا نحن" onerror="this.src='images/red_truck.png'">
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ CORE FOCUS (SERVICES OVERLAP) ══════════════ -->
+    <section class="h-focus" id="core-focus">
+        <div class="h-focus__bg">
+            <img src="images/hero_modern.png" alt="" onerror="this.src='images/red_truck.png'">
+            <div class="h-focus__overlay"></div>
+        </div>
+        <div class="container h-focus__inner" data-reveal>
+            <h2 class="h-focus__title">تأسست الشركة لتلبية الطلب المتزايد على خدمات النقل في مجال المحروقات والبضائع</h2>
+            
+            <div class="h-focus__cards">
+                <!-- Card 1: Supply -->
+                <div class="focus-card">
+                    <div class="focus-card__img">
+                        <img src="images/red_truck.png" alt="التوريد" onerror="this.src='images/hero_modern.png'">
+                    </div>
+                    <div class="focus-card__body">
+                        <div class="focus-card__icon"><i class="fas fa-building"></i></div>
+                        <h3>التوريد</h3>
+                        <p>تأسست الشركة لتلبية الطلب المتزايد على خدمات النقل في مجال المحروقات والبضائع<br>تأسست الشركة لتلبية الطلب المتزايد على خدمات النقل في مجال المحروقات والبضائع</p>
+                        <a href="pages/services.html" class="btn">اكتشف المزيد</a>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Transport -->
+                <div class="focus-card">
+                    <div class="focus-card__img">
+                        <img src="images/hero_modern.png" alt="النقل" onerror="this.src='images/red_truck.png'">
+                    </div>
+                    <div class="focus-card__body">
+                        <div class="focus-card__icon"><i class="fas fa-home"></i></div>
+                        <h3>النقل</h3>
+                        <p>تأسست الشركة لتلبية الطلب المتزايد على خدمات النقل في مجال المحروقات والبضائع<br>تأسست الشركة لتلبية الطلب المتزايد على خدمات النقل في مجال المحروقات والبضائع</p>
+                        <a href="pages/services.html" class="btn">اكتشف المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ ARTICLES / NEWS ══════════════ -->
+    <section class="h-articles" id="articles">
+        <div class="container">
+            <h2 class="section-title text-center" style="margin-bottom:40px;" data-reveal>تأسست الشركة لتلبية الطلب المتزايد على خدمات النقل في مجال المحروقات والبضائع</h2>
+            
+            <!-- Filters -->
+            <div class="h-articles__filters" data-reveal data-delay="1">
+                <button class="filter-btn active">كل المقالات</button>
+                <button class="filter-btn">مقالات النقل</button>
+                <button class="filter-btn">مقالات المحروقات</button>
+                <button class="filter-btn">مقالات التموين</button>
+            </div>
+            
+            <!-- Grid -->
+            <div class="art-grid" data-reveal data-delay="2">
+                <!-- Art 1 -->
+                <div class="art-card">
+                    <div class="art-card__img">
+                        <img src="images/hero_modern.png" alt="نقل البضائع" onerror="this.src='images/red_truck.png'">
+                    </div>
+                    <div class="art-card__body">
+                        <h3 class="art-title">نقل البضائع: خدمة احترافية موثوقة مع شركة تسارع الأفق المحدودة</h3>
+                        <div class="art-date">مارس 13, 2025</div>
+                        <p class="art-snippet">مقدمة يعد نقل البضائع عنصراً أساسياً في سلسلة التوريد لأي شركة تعتمد على تسليم المنتجات أو المواد الأولية في الوقت...</p>
+                        <a href="#" class="art-link">قراءة المزيد</a>
+                    </div>
+                </div>
+                <!-- Art 2 -->
+                <div class="art-card">
+                    <div class="art-card__img">
+                        <img src="images/red_truck.png" alt="نقل المحروقات" onerror="this.src='images/hero_modern.png'">
+                    </div>
+                    <div class="art-card__body">
+                        <h3 class="art-title">نقل المحروقات: خدمة أمنة وموثوقة مع شركة تسارع الأفق المحدودة</h3>
+                        <div class="art-date">مارس 13, 2025</div>
+                        <p class="art-snippet">في عالم يعتمد بشكل أساسي على الطاقة، يعد نقل المحروقات عنصراً أساسياً لضمان استمرارية العمليات الصناعية، التجارية، وحتى الحياة اليومية...</p>
+                        <a href="#" class="art-link">قراءة المزيد</a>
+                    </div>
+                </div>
+                <!-- Art 3 -->
+                <div class="art-card">
+                    <div class="art-card__img">
+                        <img src="images/hero_modern.png" alt="نقل الديزل" onerror="this.src='images/red_truck.png'">
+                    </div>
+                    <div class="art-card__body">
+                        <h3 class="art-title">نقل الديزل: حلول موثوقة لتلبية احتياجات الطاقة</h3>
+                        <div class="art-date">فبراير 19, 2025</div>
+                        <p class="art-snippet">نقل الديزل: حلول موثوقة لتلبية احتياجات الطاقة يعد الديزل عنصراً أساسياً في تشغيل العديد من القطاعات الحيوية التي تشكل العمود...</p>
+                        <a href="#" class="art-link">قراءة المزيد</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;" data-reveal>
+                <a href="#" class="btn-load-more">تحميل المزيد</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ══════════════ PROJECTS TEASER ══════════════ -->
+    <section class="h-proj-teaser" id="projects">
+        <div class="container">
+            <div class="section-label" data-reveal><span class="section-label__line"></span>مشاريعنا<span class="section-label__line"></span></div>
+            <h2 class="section-title" data-reveal>أبرز إنجازاتنا</h2>
+            <p class="section-sub" data-reveal>شراكات استراتيجية مع الفعاليات الوطنية الكبرى والمشاريع الحيوية في المملكة</p>
+            <div class="proj-grid" data-reveal>
+                <div class="proj-card">
+                    <img src="images/reyadh_season.png" alt="موسم الرياض" onerror="this.src='images/hero_modern.png'">
+                    <div class="proj-card__grad"></div>
+                    <div class="proj-card__body">
+                        <span class="proj-tag">وقود الفعاليات</span>
+                        <h3>موسم الرياض</h3>
+                        <p>5 مليون لتر وقود — إمداد متواصل لكامل موسم الرياض</p>
+                    </div>
+                </div>
+                <div class="proj-card">
+                    <img src="images/formel.png" alt="فورمولا 1" onerror="this.src='images/hero_modern.png'">
+                    <div class="proj-card__grad"></div>
+                    <div class="proj-card__body">
+                        <span class="proj-tag">سباقات</span>
+                        <h3>سباق الفورمولا 1</h3>
+                        <p>وقود سباقات متخصص لجائزة السعودية الكبرى</p>
+                    </div>
+                </div>
+                <div class="proj-card">
+                    <img src="images/nationlaevents.png" alt="فعاليات وطنية" onerror="this.src='images/hero_modern.png'">
+                    <div class="proj-card__grad"></div>
+                    <div class="proj-card__body">
+                        <span class="proj-tag">وطنية</span>
+                        <h3>الفعاليات الوطنية</h3>
+                        <p>دعم عشرات الفعاليات الوطنية عبر مناطق المملكة</p>
+                    </div>
+                </div>
+            </div>
+            <div class="svc-cta-row" data-reveal>
+                <a href="pages/projects.html" class="btn-outline-dark">استعراض كل المشاريع <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ FAQ + CONTACT ══════════════ -->
+    <section class="h-faq-contact" id="faq">
+        <div class="container h-faq-contact__grid">
+            <div class="hfc-faq" data-reveal>
+                <div class="section-label" style="justify-content:flex-start;"><span class="section-label__line"></span>الأسئلة الشائعة</div>
+                <h2 class="section-title" style="text-align:right;margin-bottom:35px;">هل لديك<br><span style="color:var(--red);">استفسار؟</span></h2>
+                <div class="faq-list">
+                    <div class="faq2"><button class="faq2__q" onclick="toggleF(this)">هل تتوفر خدمة الوقود المتنقل في طرق السفر؟<i class="fas fa-plus"></i></button><div class="faq2__a">ليس بعد، سيكون متوفراً قريباً. نحرص على توسيع خدماتنا باستمرار.</div></div>
+                    <div class="faq2"><button class="faq2__q" onclick="toggleF(this)">ما هي أنواع الوقود الموجودة لديكم؟<i class="fas fa-plus"></i></button><div class="faq2__a">نقدم الديزل والبنزين بنوعيه للمحطات والمصانع والمنشآت الصناعية والتجارية.</div></div>
+                    <div class="faq2"><button class="faq2__q" onclick="toggleF(this)">ما هي مناطق التغطية لديكم؟<i class="fas fa-plus"></i></button><div class="faq2__a">نغطي جميع مناطق المملكة العربية السعودية مع تركيز خاص على الرياض وجدة والمنطقة الشرقية.</div></div>
+                    <div class="faq2"><button class="faq2__q" onclick="toggleF(this)">كم تستغرق مدة توصيل الطلب؟<i class="fas fa-plus"></i></button><div class="faq2__a">تعتمد على الموقع والحجم، لكننا نلتزم بأسرع وقت مع الحفاظ على أعلى معايير الجودة.</div></div>
+                    <div class="faq2"><button class="faq2__q" onclick="toggleF(this)">هل تقدمون خدمة الطوارئ؟<i class="fas fa-plus"></i></button><div class="faq2__a">نعم، لدينا فريق طوارئ متاح على مدار الساعة 7 أيام في الأسبوع للحالات العاجلة.</div></div>
+                </div>
+            </div>
+            <div class="hfc-contact" data-reveal data-delay="1">
+                <div class="hfc-contact__card">
+                    <div class="hfc-card-top">
+                        <div class="hfc-card-badge"><i class="fas fa-headset"></i></div>
+                        <div><h3>تواصل معنا</h3><p>فريقنا جاهز للإجابة على جميع استفساراتك</p></div>
+                    </div>
+                    <form action="https://formspree.io/f/xzzyzzry" method="POST" class="hfc-form">
+                        <div class="hfc-row">
+                            <input type="text" name="name" placeholder="الاسم الكامل" required>
+                            <input type="tel" name="phone" placeholder="رقم الجوال">
                         </div>
-                        <p class="form-disclaimer" data-i18n="newsletter_privacy">We respect your privacy. Unsubscribe at any time.</p>
+                        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                        <textarea name="message" placeholder="رسالتك هنا..." required></textarea>
+                        <button type="submit"><i class="fas fa-paper-plane"></i> إرسال الرسالة</button>
                     </form>
+                    <div class="hfc-contact-links">
+                        <a href="tel:+966558391838"><i class="fas fa-phone-alt"></i> +966 55 839 1838</a>
+                        <a href="mailto:info@allianceofemtiaz.com"><i class="fas fa-envelope"></i> info@allianceofemtiaz.com</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <a class="wa-float" href="https://wa.me/966558391838" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
     <footer id="shared-footer"></footer>
 
-    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+    <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    const delays = {'0':0,'1':100,'2':200,'3':300,'4':400,'5':500};
+    const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+            if(e.isIntersecting){
+                const d = delays[e.target.dataset.delay||'0']||0;
+                setTimeout(()=>e.target.classList.add('revealed'),d);
+            }
+        });
+    },{threshold:0.12});
+    revealEls.forEach(el=>{el.classList.add('will-reveal');obs.observe(el);});
 
-    <!-- Quote Method Modal -->
-    <div id="quote-modal" class="quote-modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
-        <div class="quote-modal-overlay"></div>
-        <div class="quote-modal-content" tabindex="-1">
-            <button id="quote-modal-close" class="quote-modal-close" onclick="closeQuoteModal()" aria-label="Close">
-                <i class="fas fa-times"></i>
-            </button>
-            
-            <div class="quote-modal-header">
-                <h2 data-i18n="request_quote">Request a Quote</h2>
-                <p data-i18n="quote_method_select">Choose your preferred way to contact us:</p>
-            </div>
+    // Count-up
+    function animateCount(el){
+        const target=+el.dataset.count, dur=1800;
+        let start=null;
+        const step=ts=>{
+            if(!start)start=ts;
+            const p=Math.min((ts-start)/dur,1);
+            const ease=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+            el.textContent=Math.floor(ease*target);
+            if(p<1)requestAnimationFrame(step);else el.textContent=target;
+        };
+        requestAnimationFrame(step);
+    }
+    const cObs=new IntersectionObserver((ents)=>{
+        ents.forEach(e=>{if(e.isIntersecting){animateCount(e.target);cObs.unobserve(e.target);}});
+    },{threshold:0.5});
+    document.querySelectorAll('[data-count]').forEach(el=>cObs.observe(el));
 
-            <div class="quote-modal-options">
-                <!-- WhatsApp Option -->
-                <button class="quote-option whatsapp-option" onclick="openWhatsAppQuote()">
-                    <div class="option-icon whatsapp-bg">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <div class="option-content">
-                        <h3 data-i18n="contact_via_whatsapp">Chat on WhatsApp</h3>
-                        <p data-i18n="whatsapp_instant">Instant messaging • Quick response</p>
-                    </div>
-                    <div class="option-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </button>
+    // FAQ
+    function toggleF(btn){
+        const item=btn.parentElement;
+        const isOpen=item.classList.contains('open');
+        document.querySelectorAll('.faq2.open').forEach(f=>f.classList.remove('open'));
+        if(!isOpen)item.classList.add('open');
+    }
 
-                <!-- Form Option -->
-                <button class="quote-option form-option" onclick="goToQuoteForm()">
-                    <div class="option-icon form-bg">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="option-content">
-                        <h3 data-i18n="detailed_form">Detailed Quote Form</h3>
-                        <p data-i18n="form_comprehensive">Complete information • Email confirmation</p>
-                    </div>
-                    <div class="option-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </div>
+    // Why Us interactive rows
+    function setActiveWhy(el){
+        el.closest('.why2-list').querySelectorAll('.why2-item').forEach(i=>i.classList.remove('why2-item--active'));
+        el.classList.add('why2-item--active');
+    }
 
-    <a href="https://wa.me/966558391838?text=مرحبا شركة تحالف الامتياز, أود طلب عرض سعر لنقل مشتقات النفط." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    // HERO SLIDER ENGINE
+    (function(){
+        const slides=document.querySelectorAll('.hs__slide');
+        const dots=document.querySelectorAll('.hs__dot');
+        const tagEl=document.getElementById('hs-svc-tag');
+        const titleEl=document.getElementById('hs-svc-title');
+        const descEl=document.getElementById('hs-svc-desc');
+        const iconEl=document.getElementById('hs-svc-icon');
+        const currEl=document.getElementById('hs-curr');
+        const progEl=document.getElementById('hs-progress');
+        const DURATION=5500;
+        let current=0,timer=null;
+        function pad(n){return n<10?'0'+n:''+n;}
+        function startProgress(){
+            progEl.style.transition='none';progEl.style.width='0%';
+            requestAnimationFrame(()=>requestAnimationFrame(()=>{
+                progEl.style.transition='width '+DURATION+'ms linear';progEl.style.width='100%';
+            }));
+        }
+        function updateContent(slide){
+            [tagEl,titleEl,descEl].forEach(el=>{el.style.opacity='0';el.style.transform='translateY(18px)';});
+            const badge=iconEl.parentElement;
+            badge.style.opacity='0';badge.style.transform='scale(0.6) rotate(-20deg)';
+            setTimeout(()=>{
+                tagEl.textContent=slide.dataset.svcTag;
+                titleEl.textContent=slide.dataset.svcTitle;
+                descEl.textContent=slide.dataset.svcDesc;
+                iconEl.className='fas '+slide.dataset.svcIcon;
+                [tagEl,titleEl,descEl].forEach((el,i)=>{
+                    el.style.transition='opacity 0.55s ease '+i*0.09+'s, transform 0.55s ease '+i*0.09+'s';
+                    el.style.opacity='1';el.style.transform='translateY(0)';
+                });
+                badge.style.transition='all 0.5s cubic-bezier(0.175,0.885,0.32,1.275) 0.1s';
+                badge.style.opacity='1';badge.style.transform='scale(1) rotate(0deg)';
+            },300);
+        }
+        window.hsGoto=function(idx){
+            slides[current].classList.remove('active');slides[current].classList.add('leaving');
+            dots[current].classList.remove('active');
+            const prev=current;
+            setTimeout(()=>slides[prev].classList.remove('leaving'),1100);
+            current=((idx%slides.length)+slides.length)%slides.length;
+            slides[current].classList.add('active');dots[current].classList.add('active');
+            currEl.textContent=pad(current+1);updateContent(slides[current]);startProgress();
+            clearInterval(timer);timer=setInterval(()=>hsGoto(current+1),DURATION);
+        };
+        window.hsNext=()=>hsGoto(current+1);
+        window.hsPrev=()=>hsGoto(current-1);
+        document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')hsPrev();if(e.key==='ArrowLeft')hsNext();});
+        startProgress();timer=setInterval(()=>hsGoto(current+1),DURATION);
+    })();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

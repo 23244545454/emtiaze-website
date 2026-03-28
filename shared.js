@@ -25,7 +25,7 @@ function updateThemeToggle(theme) {
 function generateSharedHTML() {
     const isInPages = window.location.pathname.includes('/pages/');
     const currentPath = window.location.pathname;
-    let homeHref = isInPages ? '../index.html' : 'index.html';
+    let homeHref = '/';
     let aboutHref = isInPages ? 'about.html' : 'pages/about.html';
     let servicesHref = isInPages ? 'services.html' : 'pages/services.html';
     let projectsHref = isInPages ? 'projects.html' : 'pages/projects.html';
@@ -45,118 +45,212 @@ function generateSharedHTML() {
     if (currentPath === '/pages/contact.html') contactHref = '#';
 
     const headerHTML = `
-    <div class="top-bar">
-    <div class="contact-info">
-    <span class="email" data-i18n="email">info@allianceofemtiaz.com</span>
-    <span class="phone"><span dir="ltr" data-i18n="phone">+966 55 839 1838</span></span>
-    <a href="https://wa.me/966558391838" class="whatsapp-icon" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-    </a>
-    </div>
-            <div class="top-bar-right">
-                <select id="language-selector">
-                <option value="en" data-i18n="language_english">English</option>
-                <option value="ar" data-i18n="language_arabic">العربية</option>
-                </select>
-                <div class="social-media">
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <style>
+           .new-design-header {
+               background: #f8f8f8 !important;
+               box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+               border-bottom: 1px solid rgba(0,0,0,0.05);
+           }
+           .new-header-container {
+               padding: 10px 0;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               direction: rtl; /* Force RTL reading order */
+           }
+           .desktop-nav { background: transparent !important; }
+           .desktop-nav ul {
+               display: flex;
+               align-items: center;
+               gap: 35px !important;
+               list-style: none;
+               margin: 0;
+               padding: 0;
+               background: transparent !important;
+           }
+           .desktop-nav ul li {
+               border: none !important;
+               margin: 0 !important;
+               padding: 0 !important;
+               background: transparent !important;
+               box-shadow: none !important;
+           }
+           .desktop-nav ul li::after, .desktop-nav ul li::before {
+               display: none !important;
+               background: none !important;
+           }
+           .desktop-nav ul li a {
+               color: #111 !important;
+               font-weight: 800 !important;
+               font-size: 1.15rem !important;
+               text-decoration: none !important;
+               padding: 10px 0 !important;
+               position: relative;
+               white-space: nowrap !important;
+               font-family: 'Cairo', sans-serif;
+               border: none !important;
+               background: transparent !important;
+               box-shadow: none !important;
+           }
+           .desktop-nav ul li a::before, .desktop-nav ul li a::after {
+               content: none !important;
+               display: none !important;
+               background: none !important;
+               box-shadow: none !important;
+           }
+           .desktop-nav ul li a:hover {
+               color: #e31e24 !important;
+               background: transparent !important;
+           }
+           .desktop-nav ul li a.active {
+               color: #e31e24 !important;
+               border-bottom: 2px solid #e31e24 !important;
+           }
+           .header-left-actions {
+               display: flex;
+               align-items: center;
+               gap: 15px;
+           }
+           .header-contact-outline {
+               background: rgba(0,0,0,0.03);
+               border: 1px solid #e31e24;
+               color: #111;
+               font-weight: 800;
+               font-family: 'Cairo', sans-serif;
+               font-size: 1.1rem;
+               padding: 8px 30px;
+               border-radius: 4px;
+               cursor: pointer;
+               transition: 0.3s;
+           }
+           .header-contact-outline:hover {
+               background: #e31e24;
+               color: #fff;
+           }
+           .header-lang-box {
+               display: flex;
+               align-items: center;
+               gap: 10px;
+               background: #fff;
+               border: 1px solid #eaeaea;
+               padding: 5px 15px;
+               border-radius: 4px;
+               box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+               cursor: pointer;
+               font-family: 'Inter', sans-serif;
+               font-weight: 800;
+               color: #333;
+           }
+           .header-lang-box:hover {
+               background: #fdfdfd;
+           }
+           .lang-arrow { font-size: 0.8rem; color: #555; }
+        </style>
+
+        <div class="main-header new-design-header">
+            <div class="container new-header-container">
+                <!-- LOGO ON FAR RIGHT (Start of RTL container) -->
+                <div class="logo">
+                    <img src="${logoSrc}" alt="Emtiaze Company Logo" style="max-height: 55px;">
+                    <span data-i18n="company_name" style="display:none;">Tahaluf Alemtiaz</span>
                 </div>
+                
+                <!-- NAVIGATION LINKS IN CENTER -->
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="${homeHref}" class="active">الصفحة الرئيسية</a></li>
+                        <li><a href="#">المقالات</a></li>
+                        <li><a href="${contactHref}">اتصل بنا</a></li>
+                        <li><a href="${servicesHref}">خدماتنا</a></li>
+                        <li><a href="#">رفع طلب</a></li>
+                        <li><a href="${projectsHref}">مشاريعنا</a></li>
+                        <li><a href="${aboutHref}">من نحن</a></li>
+                    </ul>
+                </nav>
+
+                <!-- BUTTONS ON FAR LEFT (End of RTL container) -->
+                <div class="header-left-actions" dir="ltr"> <!-- LTR here so AR ^ stays left-to-right -->
+                    <div class="header-lang-box">
+                        <i class="fas fa-chevron-up lang-arrow"></i>
+                        <span style="font-size: 1.1rem; margin: 0 5px;">AR</span>
+                        <img src="${isInPages ? '../images/saudi_flag.png' : 'images/saudi_flag.png'}" alt="Saudi Flag" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;" onerror="this.src='images/logo.png'">
+                    </div>
+                    <button class="header-contact-outline" onclick="window.location.href='${contactHref}'">التواصل والاستفسار</button>
+                </div>
+                
+                <button class="mobile-menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars" style="color:#111; font-size: 1.8rem;"></i>
+                </button>
             </div>
-        </div>
-        <div class="main-header">
-        <div class="logo">
-        <img src="${logoSrc}" alt="Emtiaze Company Logo">
-        <span data-i18n="company_name">Tahaluf Alemtiaz Company Limited</span>
-        </div>
-        <div class="header-actions">
-        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
-        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        </button>
-        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-        </button>
-        </div>
         </div>
     `;
 
     const footerHTML = `
-        <div class="footer-top">
+        <div class="footer-curved-top">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="width: 100%; height: 120px; display: block;">
+                <path d="M0,0 C480,120 960,120 1440,0 L1440,120 L0,120 Z" fill="#1b2824"></path>
+            </svg>
+        </div>
+        <div class="new-premium-footer" style="background-color: #1b2824; color: #fff; padding: 60px 0 20px;" dir="rtl">
             <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section footer-brand">
-                        <div class="footer-logo">
-                            <img src="${logoSrc}" alt="Emtiaze Company Logo">
-                            <span data-i18n="company_name">Tahaluf Alemtiaz Company Limited</span>
-                        </div>
+                <div class="footer-grid-layout" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; align-items: start;">
+                    
+                    <!-- Right Col: Info -->
+                    <div class="footer-brand-info text-right">
+                        <img src="${isInPages ? '../images/logo_oval.png' : 'images/logo_oval.png'}" alt="Company Logo" style="max-height: 80px; margin-bottom: 20px;" onerror="this.src='${logoSrc}'">
+                        <p style="color: #bbb; line-height: 1.8; font-size: 0.95rem;">
+                            بدأت شركتنا مسيرتها الناجحة بروح الشغف والالتزام، بهدف تعزيز الإسهام في تقديم خدمات النقل بشكل يعزز ويدعم القطاعات المختلفة.
+                        </p>
                     </div>
-                    <div class="footer-section">
-                        <h3 data-i18n="important_links">Important Links</h3>
-                        <ul class="footer-links">
-                            <li><a href="${homeHref}" data-i18n="home">Home</a></li>
-                            <li><a href="${aboutHref}" data-i18n="about">About Us</a></li>
-                            <li><a href="${servicesHref}" data-i18n="services">Our Services</a></li>
-                            <li><a href="${projectsHref}" data-i18n="projects">Our Projects</a></li>
-                            <li><a href="${clientsHref}" data-i18n="clients">Clients</a></li>
-                            <li><a href="${quoteHref}" data-i18n="quote">Request a Quote</a></li>
-                            <li><a href="${contactHref}" data-i18n="contact">Contact Us</a></li>
+
+                    <!-- Center Col 1: Services -->
+                    <div class="footer-links-col text-right">
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 25px; color: #fff;">خدماتنا :</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #fff; text-decoration: none;">بترولي نقليات</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #fff; text-decoration: none;">بترولي محطات</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #fff; text-decoration: none;">الخدمات اللوجستية</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #fff; text-decoration: none;">نقل البضائع</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #fff; text-decoration: none;">نقل المحروقات</a></li>
                         </ul>
                     </div>
-                    <div class="footer-section">
-                        <h3 data-i18n="contact_information">Contact Info</h3>
-                        <div class="contact-details-footer">
-                            <div class="contact-item-footer">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <p class="label" data-i18n="address">Address</p>
-                                    <p dir="ltr" data-i18n="address">Tabuk, Hay Karim, Abi Al-Qasim Al-Zahri, 47916</p>
-                                </div>
-                            </div>
-                            <div class="contact-item-footer">
-                                <i class="fas fa-phone-alt"></i>
-                                <div>
-                                    <p class="label" data-i18n="phone">Phone</p>
-                                    <p dir="ltr">+966 55 839 1838</p>
-                                </div>
-                            </div>
-                            <div class="contact-item-footer">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <p class="label" data-i18n="email">Email</p>
-                                    <p dir="ltr">info@allianceofemtiaz.com</p>
-                                </div>
-                            </div>
-                        </div>
+
+                    <!-- Center Col 2: Quick Links -->
+                    <div class="footer-links-col text-right">
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 25px; color: #fff;">روابط سريعة</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;"><a href="${homeHref}" style="color: #fff; text-decoration: none;">الصفحة الرئيسية</a></li>
+                            <li style="margin-bottom: 12px;"><a href="#" style="color: #fff; text-decoration: none;">المقالات</a></li>
+                            <li style="margin-bottom: 12px;"><a href="${contactHref}" style="color: #fff; text-decoration: none;">اتصل بنا</a></li>
+                            <li style="margin-bottom: 12px;"><a href="${aboutHref}" style="color: #fff; text-decoration: none;">من نحن</a></li>
+                            <li style="margin-bottom: 12px;"><a href="${servicesHref}" style="color: #fff; text-decoration: none;">خدماتنا</a></li>
+                            <li style="margin-bottom: 12px;"><a href="${quoteHref}" style="color: #fff; text-decoration: none;">رفع طلب</a></li>
+                        </ul>
                     </div>
-                    <div class="footer-section">
-                        <h3 data-i18n="follow_us">Follow Us</h3>
-                        <div class="social-media footer-social">
-                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+
+                    <!-- Left Col: Subscribe & Contact -->
+                    <div class="footer-subscribe-col text-right">
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; color: #fff;">تواصل معنا</h3>
+                        <div class="subscribe-box" style="display: flex; background: transparent; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; overflow: hidden; margin-bottom: 25px;">
+                            <button style="background: #e31e24; color: #fff; border: none; padding: 0 40px; font-weight: 600; cursor: pointer;">اشتراك</button>
+                            <input type="email" placeholder="info@allianceofemtiaz.com" style="flex: 1; background: transparent; border: none; padding: 12px 15px; color: #fff; outline: none; text-align: left;" dir="ltr">
+                        </div>
+                        <div class="footer-contact-mini" style="font-size: 0.9rem; color: #bbb;">
+                            <p style="margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="color: #e31e24; margin-left: 8px;"></i> الرياض - حي الدريهمية - شارع صيدا</p>
+                            <p style="margin-bottom: 10px;"><i class="fas fa-envelope" style="color: #e31e24; margin-left: 8px;"></i> info@allianceofemtiaz.com</p>
+                            <p><i class="fas fa-phone-alt" style="color: #e31e24; margin-left: 8px;"></i> 0555253032</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 <span data-i18n="company_name">Tahaluf Alemtiaz Company Limited</span>. All rights reserved.</p>
-                    <div class="footer-links-bottom">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Policy</a>
+
+                <!-- Footer Bottom Strip -->
+                <div class="footer-bottom-strip" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 25px; flex-direction: row-reverse;">
+                    <p style="color: #bbb; font-size: 0.9rem; margin: 0;">حقوق النشر &copy; 2025 | جميع الحقوق محفوظة | شركة تحالف الامتياز المحدودة</p>
+                    <div class="footer-social-icons" style="display: flex; gap: 15px;">
+                        <a href="#" style="color: #bbb; font-size: 1.2rem; display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; text-decoration: none;"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" style="color: #bbb; font-size: 1.2rem; display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" style="color: #bbb; font-size: 1.2rem; display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; text-decoration: none;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: #bbb; font-size: 1.2rem; display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
