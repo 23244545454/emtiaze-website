@@ -1001,8 +1001,9 @@ body.home-page { font-family: var(--font-ar); background: #fff; color: var(--tex
    RESPONSIVE
    ═══════════════════════════════════════════════════════════════ */
 @media (max-width:1100px) {
-  .h-bento__grid { grid-template-columns:1fr 1fr; }
-  .b-card--main { grid-column:span 2; height:480px; }
+  .h-bento__grid { display: grid; grid-template-columns: 1fr 1fr; height: auto; }
+  .b-card--main { grid-column: span 2; height: 480px; }
+  .b-right-col { grid-column: span 2; }
   .h-why__inner { grid-template-columns:1fr; }
   .h-why__left { text-align:center; align-items:center; }
   .section-title.white,.section-sub.light { text-align:center; }
@@ -1015,8 +1016,10 @@ body.home-page { font-family: var(--font-ar); background: #fff; color: var(--tex
 @media (max-width:768px) {
   .h-hero__stats { grid-template-columns:1fr 1fr; }
   .h-hero__scroll-hint { display:none; }
-  .h-bento__grid { grid-template-columns:1fr; }
-  .b-card--main { grid-column:span 1; height:420px; }
+  .h-bento__grid { display: grid; grid-template-columns: 1fr; height: auto; }
+  .b-card--main { grid-column: span 1; height: 420px; }
+  .b-right-col { grid-column: span 1; }
+  .b-bottom-row { flex-direction: column; }
   .h-services__grid,.h-faq-contact__grid { grid-template-columns:1fr; }
   
   .h-why__panel { flex: 0 0 100%; max-width: 100%; }
