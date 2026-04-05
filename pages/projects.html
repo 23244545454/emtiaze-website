@@ -21,6 +21,16 @@
         }
         .project-tags { display: flex; flex-wrap: wrap; margin-top: 15px; }
         .project-bento-card.large { grid-column: span 2; min-height: 500px; }
+        .projects-stats-row {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; color: #fff;
+        }
+        @media(max-width: 800px) {
+            .projects-stats-row { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        }
+        @media(max-width: 500px) {
+            .projects-stats-row { grid-template-columns: 1fr; }
+            .project-bento-card.large { grid-column: span 1; }
+        }
     </style>
 </head>
 <body>
@@ -39,7 +49,7 @@
     <!-- Stats Bar -->
     <section style="background: #e31e24; padding: 40px 0; direction: rtl;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; color: #fff;">
+            <div class="projects-stats-row">
                 <div>
                     <h3 style="font-size: 3rem; font-weight: 900; margin: 0;">+100</h3>
                     <p style="margin: 5px 0; font-weight: 600; opacity: 0.9;">مشروع منجز</p>

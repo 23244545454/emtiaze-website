@@ -6263,6 +6263,14 @@ nav ul li a:hover::after {
 .value-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 15px; color: #111; }
 .value-card p { font-size: 1rem; color: #666; line-height: 1.6; margin: 0; }
 
+@media(max-width: 900px) {
+    .values-matrix { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 600px) {
+    .values-matrix { grid-template-columns: 1fr; }
+}
+
 /* ═══════════════════════════════════════════════════════════════
    PREMIUM FOOTER LAYOUT (FROM SHARED.JS)
    ═══════════════════════════════════════════════════════════════ */
