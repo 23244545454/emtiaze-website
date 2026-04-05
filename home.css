@@ -1551,3 +1551,355 @@ body.home-page { font-family: var(--font-ar); background: #fff; color: var(--tex
 .h-why, .h-faq-contact {
   border-top: 1px solid rgba(255,255,255,0.04);
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   PREMIUM DESIGN — Phase 3
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── 1. STICKY GLASSMORPHISM HEADER ─────────────────────────── */
+.main-header {
+  transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+}
+.main-header.scrolled {
+  background: rgba(10, 20, 14, 0.88) !important;
+  backdrop-filter: blur(24px) saturate(1.8) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.8) !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.06) !important;
+}
+
+/* ─── 2. HERO FLOATING ORB DECORATIONS ───────────────────────── */
+.hs::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  right: -120px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(227,30,36,0.18) 0%, transparent 70%);
+  animation: orbFloat 8s ease-in-out infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+.hs::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,58,42,0.55) 0%, transparent 70%);
+  animation: orbFloat 10s ease-in-out infinite reverse;
+  z-index: 2;
+  pointer-events: none;
+}
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  33%       { transform: translateY(-30px) scale(1.05); }
+  66%       { transform: translateY(15px) scale(0.97); }
+}
+
+/* ─── 3. STATS STRIP — ICON ROW OVERHAUL ─────────────────────── */
+.h-stats-strip {
+  background: linear-gradient(135deg, #0a0f0d 0%, #1a0202 40%, #2a0506 100%) !important;
+  border-top: 1px solid rgba(227,30,36,0.15);
+  border-bottom: 1px solid rgba(227,30,36,0.1);
+}
+.h-stats-strip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(227,30,36,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hst {
+  transition: background 0.3s ease;
+}
+.hst:hover {
+  background: rgba(227,30,36,0.08);
+}
+.hst__n {
+  background: linear-gradient(135deg, #fff 40%, rgba(255,150,150,0.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── 4. CLIENTS / PARTNERS MARQUEE STRIP ────────────────────── */
+.h-clients {
+  padding: 55px 0;
+  background: #f8f8f8;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  overflow: hidden;
+  position: relative;
+}
+.h-clients::before, .h-clients::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.h-clients::before { left: 0; background: linear-gradient(to right, #f8f8f8, transparent); }
+.h-clients::after  { right: 0; background: linear-gradient(to left, #f8f8f8, transparent); }
+
+.h-clients__label {
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 28px;
+}
+.h-clients__track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+.h-clients__track:hover { animation-play-state: paused; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.h-clients__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 30px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 14px;
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #333;
+  letter-spacing: 0.5px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.h-clients__logo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.h-clients__logo i {
+  margin-left: 8px;
+  color: var(--red, #e31e24);
+}
+
+/* ─── 5. BENTO GRID — SECTION BLOB DECORATIONS ───────────────── */
+.h-bento {
+  position: relative;
+  overflow: hidden;
+}
+.h-bento::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,58,42,0.06) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── 6. SERVICES SECTION — CARD STRIP REDESIGN ──────────────── */
+.h-services {
+  position: relative;
+  overflow: hidden;
+}
+.h-services::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: -80px;
+  width: 350px; height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(227,30,36,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Service cards — numbered editorial overlay */
+.svc-card__body h3 {
+  position: relative;
+}
+
+/* ─── 7. WHY US — SECTION BLOB ────────────────────────────────── */
+.h-why {
+  position: relative;
+}
+.h-why::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0;
+  transform: translateY(-50%);
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(227,30,36,0.06) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── 8. IMAGE SECTION (Why Us hover) — Ken Burns ────────────── */
+.h-why__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, rgba(227,30,36,0.4), rgba(26,58,42,0.4)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.h-why__image:hover::before { opacity: 1; }
+
+/* ─── 9. CONTACT FORM — SEND BUTTON MICRO-ANIMATION ────────── */
+.hfc-form button {
+  position: relative;
+  overflow: hidden;
+}
+.hfc-form button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+.hfc-form button:hover::before { transform: translateX(100%); }
+.hfc-form button i {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hfc-form button:hover i { transform: rotate(-30deg) scale(1.3); }
+
+/* ─── 10. ARTICLES — EDITORIAL HOVER ─────────────────────────── */
+.art-card {
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+  position: relative;
+}
+.art-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.13) !important;
+}
+
+/* Reading time badge */
+.art-date {
+  position: relative;
+  padding-right: 18px;
+}
+.art-date::before {
+  content: '•';
+  position: absolute;
+  right: 4px;
+  color: var(--red, #e31e24);
+}
+
+/* Article image zoom on hover */
+.art-card__img img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+.art-card:hover .art-card__img img {
+  transform: scale(1.08) !important;
+}
+
+/* Art link — arrow slides in */
+.art-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  position: relative;
+}
+.art-link::after {
+  content: '←';
+  opacity: 0;
+  transform: translateX(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+.art-card:hover .art-link::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ─── 11. PROJECTS SECTION BLOB ────────────────────────────────── */
+.h-proj-teaser {
+  position: relative;
+  overflow: hidden;
+}
+.h-proj-teaser::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -60px;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(227,30,36,0.05) 0%, transparent 65%);
+  pointer-events: none;
+}
+.h-proj-teaser::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -40px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,58,42,0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ─── 12. SECTION TITLES — GRADIENT ACCENT ON RED SPANS ──────── */
+.section-title span[style*="color:var(--red)"],
+.section-title span[style*="color: var(--red)"] {
+  background: linear-gradient(135deg, var(--red, #e31e24), #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── 13. FAQ — BACKGROUND ────────────────────────────────────── */
+.h-faq-contact {
+  position: relative;
+  overflow: hidden;
+}
+.h-faq-contact::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(227,30,36,0.04) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ─── 14. CONTACT CARD — GRADIENT BORDER GLOW ─────────────────── */
+.hfc-contact__card {
+  position: relative;
+  border: 1px solid rgba(227,30,36,0.2);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(227,30,36,0.08);
+}
+.hfc-contact__card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: calc(var(--radius-md, 20px) + 1px);
+  background: linear-gradient(135deg, rgba(227,30,36,0.35), transparent 50%, rgba(26,58,42,0.5));
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* ─── MOBILE CLEANUP ──────────────────────────────────────────── */
+@media(max-width: 768px) {
+  .hs::before, .hs::after { display: none; }
+  .h-clients__track { animation-duration: 18s; }
+}

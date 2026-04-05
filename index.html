@@ -106,6 +106,31 @@
         </div>
     </section>
 
+    <!-- ══════════════ CLIENTS MARQUEE ══════════════ -->
+    <section class="h-clients">
+        <p class="h-clients__label">شركاء وعملاؤنا</p>
+        <div class="h-clients__track">
+            <!-- First set -->
+            <div class="h-clients__logo"><i class="fas fa-oil-can"></i> أرامكو السعودية</div>
+            <div class="h-clients__logo"><i class="fas fa-flask"></i> سابك</div>
+            <div class="h-clients__logo"><i class="fas fa-gas-pump"></i> أدنوك</div>
+            <div class="h-clients__logo"><i class="fas fa-building"></i> ناتكو</div>
+            <div class="h-clients__logo"><i class="fas fa-industry"></i> محطات الرياض</div>
+            <div class="h-clients__logo"><i class="fas fa-star"></i> موسم الرياض</div>
+            <div class="h-clients__logo"><i class="fas fa-flag"></i> فعاليات وطنية</div>
+            <div class="h-clients__logo"><i class="fas fa-trophy"></i> فورمولا 1</div>
+            <!-- Duplicate for seamless loop -->
+            <div class="h-clients__logo"><i class="fas fa-oil-can"></i> أرامكو السعودية</div>
+            <div class="h-clients__logo"><i class="fas fa-flask"></i> سابك</div>
+            <div class="h-clients__logo"><i class="fas fa-gas-pump"></i> أدنوك</div>
+            <div class="h-clients__logo"><i class="fas fa-building"></i> ناتكو</div>
+            <div class="h-clients__logo"><i class="fas fa-industry"></i> محطات الرياض</div>
+            <div class="h-clients__logo"><i class="fas fa-star"></i> موسم الرياض</div>
+            <div class="h-clients__logo"><i class="fas fa-flag"></i> فعاليات وطنية</div>
+            <div class="h-clients__logo"><i class="fas fa-trophy"></i> فورمولا 1</div>
+        </div>
+    </section>
+
     <!-- ══════════════ BENTO GRID ══════════════ -->
     <section class="h-bento" id="bento">
         <div class="container">
@@ -587,6 +612,17 @@
             document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') hsPrev(); if (e.key === 'ArrowLeft') hsNext(); });
             startProgress(); timer = setInterval(() => hsGoto(current + 1), DURATION);
         })();
+        // Scroll-triggered glassmorphism header
+        const header = document.querySelector('.main-header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 60) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }, { passive: true });
+        }
     </script>
     <script src="script.js"></script>
 </body>
