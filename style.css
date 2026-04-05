@@ -6263,6 +6263,51 @@ nav ul li a:hover::after {
 .value-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 15px; color: #111; }
 .value-card p { font-size: 1rem; color: #666; line-height: 1.6; margin: 0; }
 
+/* ═══════════════════════════════════════════════════════════════
+   PREMIUM FOOTER LAYOUT (FROM SHARED.JS)
+   ═══════════════════════════════════════════════════════════════ */
+.footer-grid-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-bottom-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 50px;
+    padding-top: 25px;
+    flex-direction: row-reverse;
+}
+
+@media(max-width: 1000px) {
+    .footer-grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 650px) {
+    .footer-grid-layout {
+        grid-template-columns: 1fr;
+        text-align: center !important;
+        gap: 30px;
+    }
+    .footer-brand-info, .footer-links-col, .footer-subscribe-col {
+        text-align: center !important;
+    }
+    .footer-brand-info img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-bottom-strip {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
 @media (max-width: 900px) {
     .service-split-row { flex-direction: column !important; }
     .projects-gallery-grid { grid-template-columns: 1fr; }

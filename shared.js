@@ -201,7 +201,7 @@ function generateSharedHTML() {
         </div>
         <div class="new-premium-footer" style="background-color: #1b2824; color: #fff; padding: 60px 0 20px;" dir="rtl">
             <div class="container">
-                <div class="footer-grid-layout" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; align-items: start;">
+                <div class="footer-grid-layout">
                     
                     <!-- Right Col: Info -->
                     <div class="footer-brand-info text-right">
@@ -252,7 +252,7 @@ function generateSharedHTML() {
                 </div>
 
                 <!-- Footer Bottom Strip -->
-                <div class="footer-bottom-strip" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding-top: 25px; flex-direction: row-reverse;">
+                <div class="footer-bottom-strip">
                     <p style="color: #bbb; font-size: 0.9rem; margin: 0;">حقوق النشر &copy; 2025 | جميع الحقوق محفوظة | شركة تحالف الامتياز المحدودة</p>
                     <div class="footer-social-icons" style="display: flex; gap: 15px;">
                         <a href="#" style="color: #bbb; font-size: 1.2rem; display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; text-decoration: none;"><i class="fab fa-whatsapp"></i></a>
