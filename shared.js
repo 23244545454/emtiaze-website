@@ -342,6 +342,20 @@ function generateSharedHTML() {
                 </a>
             </nav>
 
+            <!-- Language Switcher -->
+            <div class="nm-lang-section">
+                <span class="nm-lang-label"><i class="fas fa-globe"></i> اللغة / Language</span>
+                <div class="nm-lang-toggle">
+                    <button class="nm-lang-btn" id="nm-lang-ar" onclick="switchMenuLang('ar')">
+                        <img src="${isInPages ? '../images/saudi_flag.png' : 'images/saudi_flag.png'}" alt="AR" onerror="this.style.display='none'">
+                        عربي
+                    </button>
+                    <button class="nm-lang-btn" id="nm-lang-en" onclick="switchMenuLang('en')">
+                        🇬🇧 English
+                    </button>
+                </div>
+            </div>
+
             <!-- CTA Actions -->
             <div class="nm-actions">
                 <a href="${quoteHref}" class="nm-btn-quote" onclick="closeMenu()">
@@ -401,6 +415,26 @@ function closeMenu() {
     }
 }
 
+function switchMenuLang(lang) {
+    // Call the main translation engine in script.js
+    if (typeof updateLanguage === 'function') {
+        updateLanguage(lang);
+    } else {
+        localStorage.setItem('selectedLanguage', lang);
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        const sel = document.querySelector('#language-selector');
+        if (sel) sel.value = lang;
+    }
+    // Highlight active button
+    const arBtn = document.getElementById('nm-lang-ar');
+    const enBtn = document.getElementById('nm-lang-en');
+    if (arBtn && enBtn) {
+        arBtn.classList.toggle('active', lang === 'ar');
+        enBtn.classList.toggle('active', lang === 'en');
+    }
+}
+
 // Function to inject header, footer, menu, and fixed navigation
 function loadSharedComponents() {
     const { headerHTML, footerHTML, menuHTML, fixedNavHTML } = generateSharedHTML();
@@ -446,6 +480,22 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             closeMenu();
+        }
+    });
+
+    // Sync lang buttons with stored preference on menu open
+    const savedLang = localStorage.getItem('selectedLanguage') || 'ar';
+    document.addEventListener('click', function(e) {
+        if (e.target && e.target.closest && e.target.closest('.mobile-menu-toggle, .menu-toggle')) {
+            setTimeout(() => {
+                const currentLang = localStorage.getItem('selectedLanguage') || 'ar';
+                const arBtn = document.getElementById('nm-lang-ar');
+                const enBtn = document.getElementById('nm-lang-en');
+                if (arBtn && enBtn) {
+                    arBtn.classList.toggle('active', currentLang === 'ar');
+                    enBtn.classList.toggle('active', currentLang === 'en');
+                }
+            }, 80);
         }
     });
 });
