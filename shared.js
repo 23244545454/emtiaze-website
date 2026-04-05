@@ -303,13 +303,13 @@ function generateSharedHTML() {
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
     const overlay = document.getElementById('nav-menu-overlay');
-    const toggleBtn = document.querySelector('.menu-toggle');
+    const toggleBtn = document.querySelector('.mobile-menu-toggle') || document.querySelector('.menu-toggle');
 
-    if (menu && overlay && toggleBtn) {
+    if (menu) {
         const isActive = menu.classList.contains('active');
         menu.classList.toggle('active');
-        overlay.classList.toggle('active');
-        toggleBtn.classList.toggle('active');
+        if (overlay) overlay.classList.toggle('active');
+        if (toggleBtn) toggleBtn.classList.toggle('active');
 
         // Prevent body scroll when menu is open
         document.body.style.overflow = isActive ? 'auto' : 'hidden';
@@ -319,12 +319,12 @@ function toggleMenu() {
 function closeMenu() {
     const menu = document.getElementById('nav-menu');
     const overlay = document.getElementById('nav-menu-overlay');
-    const toggleBtn = document.querySelector('.menu-toggle');
+    const toggleBtn = document.querySelector('.mobile-menu-toggle') || document.querySelector('.menu-toggle');
 
-    if (menu && overlay && toggleBtn) {
+    if (menu) {
         menu.classList.remove('active');
-        overlay.classList.remove('active');
-        toggleBtn.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        if (toggleBtn) toggleBtn.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
 }
