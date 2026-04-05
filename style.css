@@ -6322,3 +6322,19 @@ nav ul li a:hover::after {
     .contact-split-layout { flex-direction: column; }
     .values-matrix { grid-template-columns: 1fr; }
 }
+
+/* Hardcoded Layout Fixes for Subpages */
+.about-hero-flex { display: flex; align-items: center; gap: 60px; }
+.about-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center; }
+.about-vision-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; text-align: center; }
+.contact-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+@media(max-width: 900px) {
+    .about-hero-flex { flex-direction: column !important; text-align: center; gap: 30px; }
+    .about-vision-grid { grid-template-columns: 1fr !important; }
+}
+
+@media(max-width: 600px) {
+    .about-stats-grid { grid-template-columns: 1fr !important; }
+    .contact-form-grid { grid-template-columns: 1fr !important; }
+}
