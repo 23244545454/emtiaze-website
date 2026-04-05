@@ -232,6 +232,7 @@ function generateSharedHTML() {
                             <li style="margin-bottom: 12px;"><a href="${contactHref}" style="color: #fff; text-decoration: none;">اتصل بنا</a></li>
                             <li style="margin-bottom: 12px;"><a href="${aboutHref}" style="color: #fff; text-decoration: none;">من نحن</a></li>
                             <li style="margin-bottom: 12px;"><a href="${servicesHref}" style="color: #fff; text-decoration: none;">خدماتنا</a></li>
+                            <li style="margin-bottom: 12px;"><a href="${projectsHref}" style="color: #fff; text-decoration: none;">مشاريعنا</a></li>
                             <li style="margin-bottom: 12px;"><a href="${quoteHref}" style="color: #fff; text-decoration: none;">رفع طلب</a></li>
                         </ul>
                     </div>
