@@ -246,7 +246,7 @@ function generateSharedHTML() {
                         <div class="footer-contact-mini" style="font-size: 0.9rem; color: #bbb;">
                             <p style="margin-bottom: 10px;" dir="ltr"><i class="fas fa-map-marker-alt" style="color: #e31e24; margin-right: 8px;"></i> NATCO Middle East, Natco Logistics Services Company, SALAH AL-DIN AL AYOUBI STREET, Al Malaz, Riyadh 11411, Saudi Arabia</p>
                             <p style="margin-bottom: 10px;"><i class="fas fa-envelope" style="color: #e31e24; margin-left: 8px;"></i> info@allianceofemtiaz.com</p>
-                            <p><i class="fas fa-phone-alt" style="color: #e31e24; margin-left: 8px;"></i> 0555253032</p>
+                            <p dir="ltr" style="text-align: right;"><i class="fas fa-phone-alt" style="color: #e31e24; margin-right: 8px;"></i> +966 55 839 1838</p>
                         </div>
                     </div>
                 </div>
