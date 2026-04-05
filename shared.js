@@ -267,31 +267,103 @@ function generateSharedHTML() {
     `;
 
     const menuHTML = `
-        <div class="nav-menu-overlay" id="nav-menu-overlay"></div>
+        <div class="nav-menu-overlay" id="nav-menu-overlay" onclick="closeMenu()"></div>
         <div class="nav-menu" id="nav-menu">
-            <div class="menu-header">
-                <img src="${logoSrc}" alt="Emtiaze Company Logo">
-                <span style="font-family: 'Cairo', sans-serif;">شركة تحالف الامتياز</span>
-            </div>
-            
-            <div class="menu-lang-switcher">
-                <div class="header-lang-box" style="margin: 0; width: 100%; justify-content: center; background: rgba(0,0,0,0.03); border-color: rgba(227,30,36,0.1);">
-                    <i class="fas fa-chevron-up lang-arrow"></i>
-                    <span style="font-size: 1.1rem; margin: 0 10px;">ARABIC (AR)</span>
-                    <img src="${isInPages ? '../images/saudi_flag.png' : 'images/saudi_flag.png'}" alt="Saudi Flag" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+
+            <!-- Header -->
+            <div class="nm-header">
+                <div class="nm-brand">
+                    <img src="${logoSrc}" alt="Logo">
+                    <div class="nm-brand-text">
+                        <span class="nm-brand-name">شركة تحالف الامتياز</span>
+                        <span class="nm-brand-sub">نقل المحروقات والبضائع</span>
+                    </div>
                 </div>
+                <button class="nm-close" onclick="closeMenu()" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
 
-            <ul class="nav-links">
-                <li><a href="${homeHref}" onclick="closeMenu()"><i class="fas fa-home"></i> الصفحة الرئيسية</a></li>
-                <li><a href="${aboutHref}" onclick="closeMenu()"><i class="fas fa-info-circle"></i> من نحن</a></li>
-                <li><a href="${servicesHref}" onclick="closeMenu()"><i class="fas fa-cogs"></i> خدماتنا</a></li>
-                <li><a href="${projectsHref}" onclick="closeMenu()"><i class="fas fa-project-diagram"></i> مشاريعنا</a></li>
-                <li><a href="${contactHref}" onclick="closeMenu()"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
-            </ul>
+            <!-- Navigation Links -->
+            <nav class="nm-nav">
+                <a href="${homeHref}" class="nm-link" onclick="closeMenu()">
+                    <div class="nm-link-icon" style="background:rgba(26,58,42,0.12);color:#1a3a2a">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="nm-link-body">
+                        <span class="nm-link-title">الصفحة الرئيسية</span>
+                        <span class="nm-link-sub">اكتشف خدماتنا ومشاريعنا</span>
+                    </div>
+                    <i class="fas fa-chevron-left nm-arrow"></i>
+                </a>
 
-            <div class="menu-footer-action">
-                <button class="header-contact-outline" style="width: 100%; padding: 15px;" onclick="window.location.href='${contactHref}'">التواصل والاستفسار</button>
+                <a href="${aboutHref}" class="nm-link" onclick="closeMenu()">
+                    <div class="nm-link-icon" style="background:rgba(227,30,36,0.1);color:#e31e24">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="nm-link-body">
+                        <span class="nm-link-title">من نحن</span>
+                        <span class="nm-link-sub">تعرّف على رؤيتنا ومسيرتنا</span>
+                    </div>
+                    <i class="fas fa-chevron-left nm-arrow"></i>
+                </a>
+
+                <a href="${servicesHref}" class="nm-link" onclick="closeMenu()">
+                    <div class="nm-link-icon" style="background:rgba(227,30,36,0.1);color:#e31e24">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <div class="nm-link-body">
+                        <span class="nm-link-title">خدماتنا</span>
+                        <span class="nm-link-sub">نقل محروقات • بضائع • لوجستيات</span>
+                    </div>
+                    <i class="fas fa-chevron-left nm-arrow"></i>
+                </a>
+
+                <a href="${projectsHref}" class="nm-link" onclick="closeMenu()">
+                    <div class="nm-link-icon" style="background:rgba(26,58,42,0.12);color:#1a3a2a">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="nm-link-body">
+                        <span class="nm-link-title">مشاريعنا</span>
+                        <span class="nm-link-sub">أبرز إنجازاتنا مع الفعاليات الكبرى</span>
+                    </div>
+                    <i class="fas fa-chevron-left nm-arrow"></i>
+                </a>
+
+                <a href="${contactHref}" class="nm-link" onclick="closeMenu()">
+                    <div class="nm-link-icon" style="background:rgba(227,30,36,0.1);color:#e31e24">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="nm-link-body">
+                        <span class="nm-link-title">اتصل بنا</span>
+                        <span class="nm-link-sub">تواصل مع فريقنا المتخصص</span>
+                    </div>
+                    <i class="fas fa-chevron-left nm-arrow"></i>
+                </a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="nm-actions">
+                <a href="${quoteHref}" class="nm-btn-quote" onclick="closeMenu()">
+                    <i class="fas fa-file-signature"></i>
+                    رفع طلب جديد
+                    <i class="fas fa-arrow-left nm-btn-arrow"></i>
+                </a>
+                <a href="https://wa.me/966558391838" target="_blank" class="nm-btn-wa">
+                    <i class="fab fa-whatsapp"></i>
+                    واتساب فوري
+                </a>
+            </div>
+
+            <!-- Footer strip -->
+            <div class="nm-footer">
+                <a href="tel:+966558391838" class="nm-footer-link" dir="ltr">
+                    <i class="fas fa-phone-alt"></i> +966 55 839 1838
+                </a>
+                <span class="nm-footer-dot">|</span>
+                <a href="mailto:info@allianceofemtiaz.com" class="nm-footer-link">
+                    <i class="fas fa-envelope"></i> بريد إلكتروني
+                </a>
             </div>
         </div>
     `;
