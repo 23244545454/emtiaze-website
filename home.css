@@ -165,9 +165,11 @@ body.home-page { font-family: var(--font-ar); background: #fff; color: var(--tex
 .hs__arrow--next { left: 30px; }
 
 @media(max-width:768px){
+  .hs { height: auto; min-height: 100vh; overflow: visible; }
   .hs__svc-badge { display: none; }
   .hs__arrow { display: none; }
   .hs__title { font-size: clamp(2rem,8vw,3rem); letter-spacing: -1px; }
+  .hs__nav { bottom: 40px; }
 }
 
 /* ── Scroll Reveal System ── */
@@ -302,7 +304,13 @@ body.home-page { font-family: var(--font-ar); background: #fff; color: var(--tex
   backdrop-filter: blur(24px);
 }
 @media(max-width:600px){
-  .h-hero__stats { grid-template-columns: repeat(2, 1fr); }
+  .h-hero__stats { 
+      position: relative; 
+      bottom: auto;
+      grid-template-columns: repeat(2, 1fr); 
+      background: var(--dark);
+      border-top: none;
+  }
   .h-stat { padding: 15px 10px; border: 1px solid rgba(255,255,255,0.05); }
 }
 .h-stat {
